@@ -24,6 +24,8 @@ class OrdersController extends MemberController {
      */
     public function actionIndex()
     {
+        //echo 1;exit;
+      //  print_r($_REQUEST);EXIT;
         $this->actionList();
     }
 

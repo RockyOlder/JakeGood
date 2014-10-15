@@ -92,7 +92,7 @@ class OrderController extends BaseController {
     {
       //  print_r($_REQUEST);exit;
         $orders = $this->insertOrder();
-        echo 1;exit;
+       // echo 1;exit;
         if ($orders !== FALSE)
         {
             foreach ($orders as $order)

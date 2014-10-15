@@ -92,7 +92,6 @@
                                 </p> 
                                 <p class="sku">
                                     <span class="comment_num"><span><?php echo intval($item->rating); ?></span>人评价</span>
-                                    <span class="comment_rate">好评率96%</span>
                                     <span class="stock hide">已售<?php echo $item->sale; ?></span>
                                 </p> 
                             </a>

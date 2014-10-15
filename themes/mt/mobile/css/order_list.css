@@ -992,10 +992,10 @@ body {
 }
 
 .my_order {
-	position: absolute;
+
 	top: 0;
 	width: 100%;
-	min-height: 300px
+
 }
 
 .layer {
