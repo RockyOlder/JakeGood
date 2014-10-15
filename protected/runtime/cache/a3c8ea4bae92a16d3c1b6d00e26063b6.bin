@@ -1,0 +1,156 @@
+a:2:{i:0;a:2:{i:0;s:5416:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div class="detail-tit"></div>
+<table width="100%" cellpadding="0" cellspacing="0" class="detail-table">
+<thead><tr>
+<th width="50%">名称</th>
+		<th width="25%">数量</th>
+		<th width="25%">单价</th>
+	</tr></thead>
+<tbody>
+<tr><th colspan="3">热菜</th></tr>
+<tr>
+<td>酸菜鱼</td>
+            <td class="tc">1份</td>
+            <td class="tc">39.99元</td>
+		</tr>
+<tr class="total">
+<td></td>
+		<td class="tc">总价值<br><strong>团购价</strong>
+</td>
+		<td class="tc">39.99元<br><strong>9.99元</strong>
+</td>
+	</tr>
+</tbody>
+</table>
+<div>
+<p><strong>注：</strong>另收茶位费3.5元/人</p>
+<p>       两人起使用<br> </p>
+</div>
+
+
+		</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-09-03至2014-10-31</p>
+            </dd>
+        </dl>
+<dl>
+<dt>除外日期</dt>
+            <dd>
+                <p class="listitem">每周六、周日不可用</p>
+            </dd>
+        </dl>
+<dl>
+<dt>使用时间</dt>
+            <dd>
+                <p class="listitem">11:00-14:00</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">无需预约，如遇消费高峰时段您可能需要排队</p>
+            </dd>
+        </dl>
+<dl>
+<dt>堂食外带</dt>
+            <dd>
+                <p class="listitem">本单只适用于堂食，只适用于大厅使用，敬请谅解</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">不再与店内其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+                <p class="listitem">本单不支持使用大众点评抵用券</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem">酸菜鱼</p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/4e93c357df58aaddcbb93c04c67affec(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">商户介绍</span></h3>
+            <div><p>坚持手工工艺，制作百变面食 -<br>九毛九山西面馆在没有机器完成不了的工作的今天，依然在坚持用传统的手工工艺，一碗一碗地削着面，一个一个包着饺子，一桶一桶熬着汤。九毛九不出售机器食品、不出售速冻食品，不用浓缩汁调配汤，九毛九和面用盐、清水与鸡蛋。九毛九八大工艺手工面：刀拨面、一根 面、刀削面、剔尖、钩刀面、手擀面、揪片、猫耳朵。“面要劲道汤要香，百变面食吐芬芳，九毛九国粹手工面”。</p></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/af11b912cde511caa70a6bbd19909fff(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/0b4e8e3b5908bff8895f494a77795efb(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_main_comment"><a rel="nofollow" track="|1|module#5_tab_tgreview,action#click,dealgrp_id#8039126" href="#">团购评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+                <span class="tab-item " data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#8039126" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box J_main_comment imgloading">
+                </div>
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

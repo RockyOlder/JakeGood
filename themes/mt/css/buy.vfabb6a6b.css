@@ -1,0 +1,111 @@
+.buy-sprite,.pg-buy--download-box--qrcode .qrcode-img,.pg-buy--download-box .iphone,.pg-buy--download-box .android,.pg-buy .mobile-point-discount{background-image:url(../img/buy.v9f1632eb.png);background-repeat:no-repeat}
+#deal-buy .mainbox{padding-bottom:40px}
+#deal-buy .mainbox h2{font-size:14px;border:0;padding:0;margin:0 0 10px;color:#666}
+.pg-buy .summary-table{font-size:12px}
+.pg-buy .summary-table .desc{padding-left:16px;text-align:left}
+.pg-buy .summary-table .desc a{color:#000}
+.pg-buy .summary-table .desc .calendar-desc{font-family:'arial';color:#f76120}
+.pg-buy .summary-table .appoint-tip{margin-top:10px;padding-left:18px;color:#999;background:url(../img/sys-icons-16.vd2db5315.png) no-repeat 0 2px}
+.pg-buy .summary-table .total{padding-right:16px;text-align:right}
+.pg-buy .summary-table .extra-fee{text-align:left}
+.pg-buy .summary-table .total-fee{text-align:right}
+.pg-buy .summary-table .extra-fee .money{min-width:60px;_width:60px}
+.pg-buy .summary-table .extra-fee .badge{background-color:#f76120;margin:0 3px;padding:1px 3px;color:white}
+.pg-buy .promotion-dialog{padding:15px;line-height:1.8;border-radius:3px}
+.pg-buy .promotion-dialog a{color:#f76120}
+.pg-buy .promotion-dialog ol{padding-left:20px}
+.pg-buy .promotion-dialog li{list-style:decimal}
+.pg-buy .summary-table .total-fee .money{font-size:18px;color:#ea4f01}
+.pg-buy .summary-table .money.total{color:#ea4f01}
+.pg-buy .summary-table .cart-select-all{margin-left:4px}
+.pg-buy .summary-table .total-fee .amount{margin-right:14px}
+.pg-buy .summary-table .total-fee .amount__num{font-size:14px;color:#ea4f01}
+.pg-buy .summary-table .money,.pg-buy .discount .money{font-family:arial;font-size:14px;letter-spacing:1px}
+.pg-buy .campaign-choose{margin:20px 0 14px}
+.pg-buy .campaign-choose .common-tip{margin:0 8px 0 0;padding:10px 26px 10px 16px;font-size:12px}
+.pg-buy .campaign-choose .common-tip .common-close{top:6px;right:6px}
+.pg-buy .campaign-choose .campaign-select{max-width:200px;_width:200px;overflow:hidden;white-space:nowrap}
+.pg-buy .campaign-choose .money,.pg-buy .cardcode-type .money,.pg-buy .point-choose .money{color:#f76120}
+.pg-buy .summary-table .quantity{padding-top:10px;padding-bottom:10px}
+.pg-buy .summary-table .quantity .btn-normal{padding:5px;*padding:6px 5px 4px;font-size:12px;line-height:18px}
+.pg-buy .summary-table .quantity .minus,.pg-buy .summary-table .quantity .plus{display:inline-block;width:13px;height:13px;font-size:0;line-height:13px;background:url(../img/sp-deal.v0935a050.png) -13px 0 no-repeat;outline:0;vertical-align:middle}
+.pg-buy .summary-table .quantity .plus{background-position:-52px 0}
+.pg-buy .summary-table .quantity :hover.minus{background-position:-26px 0}
+.pg-buy .summary-table .quantity :hover.plus{background-position:-65px 0}
+.pg-buy .summary-table .quantity .minus-disabled,.pg-buy .summary-table .quantity :hover.minus-disabled{background-position:0 0}
+.pg-buy .summary-table .quantity .plus-disabled,.pg-buy .summary-table .quantity :hover.plus-disabled{background-position:-39px 0}
+.pg-buy .summary-table .quantity .f-text{width:50px;height:20px;margin:0 5px;*margin:-1px 5px;padding:5px;line-height:20px;border:1px solid #fb9d65;font-size:20px;text-align:center;vertical-align:middle}
+.pg-buy .summary-table .quantity .f-text:focus{box-shadow:inset 0 1px 2px #dbdbdb;outline:0}
+.pg-buy .summary-table .quantity .f-text:hover{border-color:#b9b9b9}
+.pg-buy .summary-table .price,.pg-buy .summary-table .total{text-align:right;color:#000}
+.pg-buy .summary-table .total .delivery-fee{font-size:12px;color:#999;font-family:arial}
+.pg-buy .delivery{padding-bottom:20px}
+.pg-buy .delivery h3 span{margin-left:10px}
+.pg-buy .delivery .address-list li{padding-left:10px}
+.pg-buy .delivery .address-list label{margin-left:3px;line-height:36px;zoom:1}
+.pg-buy .delivery .address-list .selected{background:#fef5e7}
+.pg-buy .delivery .f-textarea{width:500px;height:70px}
+.pg-buy .delivery .addOfAliPay{margin:5px 0 0}
+.pg-buy .delivery .comment{width:400px}
+.pg-buy .delivery .delivery-type li{padding-left:10px}
+.pg-buy .delivery .delivery-type label{margin-left:3px;line-height:28px;zoom:1}
+.pg-buy .mobile-group{margin-bottom:0}
+.pg-buy .blk-mobile{float:left;font-size:12px}
+.pg-buy .blk-mobile h3{font-size:14px}
+.pg-buy .blk-mobile h3 .mobile{font-size:16px;font-family:arial;color:#ea4f01}
+.pg-buy .insurance .text{color:#666;font-size:12px}
+.pg-buy .insurance .f-textarea{width:500px;height:70px}
+.pg-buy .fineprint ul{display:inline-block;zoom:1;*display:inline;width:300px;margin:0 5px 0 16px;font-size:12px;color:#666;line-height:1.6em;vertical-align:top}
+.pg-buy .fineprint li{list-style-type:none;list-style-position:outside}
+.pg-buy .fineprint .consumer-protection{display:inline-block;zoom:1;*display:inline;width:320px;margin:0 5px;vertical-align:top}
+.pg-buy .choose-pay-type{padding-left:16px}
+.pg-buy .back-to-check{margin-top:20px}
+.pg-buy .fools-day .f-text{width:400px}
+.pg-buy .fools-day .f-textarea{width:400px;height:40px}
+.pg-buy .fools-day .tip{font-size:12px;color:#999}
+.pg-buy .subs{margin-bottom:10px;color:#666;font-size:12px}
+.pg-buy .subs label{margin-right:20px}
+.pg-buy .remind{margin-bottom:10px;color:#C00;font-size:12px}
+.pg-buy .form-submit{text-align:right;overflow:hidden;zoom:1}
+.pg-buy .cardcode-type .cardcode-trigger,.pg-buy .point-choose .point-trigger{cursor:pointer}
+.pg-buy .discount .extra-fee__delivery,.pg-buy .discount .extra-fee__discount,.pg-buy .extra-fee .campaign-choose,.pg-buy .extra-fee .cardcode-type,.pg-buy .extra-fee .point-choose{text-align:right}
+.pg-buy .extra-fee .cardcode-type{margin-bottom:10px}
+.pg-buy .extra-fee .point-choose{position:relative}
+.pg-buy .discount__info{margin:0 -12px 6px;border-bottom:1px solid #f8f8f8}
+.pg-buy .discount__info h3{margin:10px 0;padding:10px 0 10px 20px;font-weight:normal;font-size:12px;background-color:#f8f8f8}
+.pg-buy .discount__info .point-tip{display:inline-block;width:18px;height:18px;margin-left:20px;vertical-align:-5px;background:url(../img/sp-deal.v0935a050.png) -93px 0 no-repeat}
+.pg-buy .discount__info__icon{display:inline-block;width:10px;height:10px;vertical-align:-4px;background:url(../img/sp-header-new.v580abde4.png) no-repeat -22px -255px}
+.pg-buy .discount__info .folded{background-position:0 -255px}
+.pg-buy .discount-table{margin:0 0 6px 20px;border:0;text-align:left;font-size:12px}
+.pg-buy .discount--card{max-height:170px}
+.pg-buy .discount-table td{padding:6px 0;border:0}
+.pg-buy .discount-table .disabled,.pg-buy .discount-table .limited{color:#999}
+.pg-buy .discount__item{color:#333;margin:10px 0}
+.pg-buy .discount__item label{margin-left:5px}
+.pg-buy .left{float:left}
+.pg-buy .discount__item strong{color:#f76120}
+.pg-buy .discount__item .price{width:80px}
+.pg-buy .point-exceed-tip{margin-left:20px;color:#666}
+.pg-buy .card-error{padding-top:5px;font-size:12px;color:#C00}
+.pg-buy .cardcode-section{margin:10px 20px}
+.pg-buy .cardcode-section .verify-card{padding:4px 14px 5px;border-left:0;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0}
+.pg-buy .weibo-share .weibo-list li{float:left;padding-right:20px}
+.pg-buy .weibo-share .weibo-list .modify{outline:0}
+.pg-buy .weibo-share .weibo-list label{display:inline-block;padding-left:18px;margin-left:5px;line-height:16px;background:url(../img/icons-share.v186f5c42.gif) no-repeat 0 -202px;zoom:1}
+.pg-buy .weibo-share .weibo-list .qq{background-position:0 -280px}
+.pg-buy .weibo-share .weibo-content{margin:10px 0 0}
+.pg-buy .weibo-share .weibo-content .f-textarea{width:85%}
+.pg-buy--download-box{margin-bottom:30px}
+.pg-buy--download-box--qrcode{float:left;width:116px;height:136px;line-height:20px;margin-right:30px;text-align:center;font-size:12px}
+.pg-buy--download-box--qrcode .qrcode-img{width:116px;height:116px;display:block;background-position:0 -222px}
+.pg-buy--download-box--buttons{font-size:12px;margin-left:146px}
+.pg-buy--download-box--buttons .grey{color:#999}
+.pg-buy--download-box .download-app-image{display:block;margin:10px 0;background-repeat:no-repeat;height:35px;width:160px;text-indent:-160px;overflow:hidden}
+.pg-buy--download-box .iphone{background-position:0 -111px}
+.pg-buy--download-box .iphone:hover,.pg-buy--download-box .iphone.iphone-hover{background-position:0 -185px}
+.pg-buy--download-box .iphone:active,.pg-buy--download-box .iphone.iphone-active{background-position:0 -148px}
+.pg-buy .J-point-content-10,.pg-buy .J-point-content-10 label{cursor:pointer}
+.pg-buy--download-box .android{background-position:0 0}
+.pg-buy--download-box .android:hover,.pg-buy--download-box .android.android-hover{background-position:0 -74px}
+.pg-buy--download-box .android:active,.pg-buy--download-box .android.android-active{background-position:0 -37px}
+.pg-buy .mobile-point-discount{background-position:0 -340px;height:17px;width:62px;display:inline-block;vertical-align:middle;*vertical-align:auto;*zoom:1;*display:inline;text-indent:-62px;overflow:hidden;margin-top:-4px;margin-left:10px}

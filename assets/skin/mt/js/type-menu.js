@@ -1,0 +1,10 @@
+//导航菜单
+$(function(){
+	$(".component-cate-nav").hover(function(){
+		$(this).find(".mt-cates").addClass("nav-unfolded");
+		$(this).find(".J-nav__list--present").show();
+	},function(){
+		$(this).find(".mt-cates").removeClass("nav-unfolded");
+		$(this).find(".J-nav__list--present").hide();	
+	});
+});

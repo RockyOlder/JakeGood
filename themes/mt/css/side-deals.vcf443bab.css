@@ -1,0 +1,14 @@
+.component-side-deals .inner-blk{padding-bottom:0;background:#FFF}
+.component-side-deals h3{margin-bottom:12px}
+.component-side-deals .deal{margin-bottom:20px;border-bottom:1px dashed #e0e0e0;font-size:12px}
+.component-side-deals .last-deal{margin-bottom:0;border:0}
+.component-side-deals .last-deal .info{margin-bottom:0}
+.component-side-deals .deal .pic{display:block;margin:0 auto 6px}
+.component-side-deals .deal h4{margin-bottom:4px}
+.component-side-deals .deal h4 a{font-weight:normal;color:#666}
+.component-side-deals .info{position:relative;margin-bottom:12px;color:#666;font-family:Helvetica,arial,sans-serif;zoom:1}
+.component-side-deals .info strong{margin-right:5px;font-size:16px}
+.component-side-deals .total{position:absolute;top:3px;right:0}
+.component-side-deals .total span{color:#ef5438}
+.component-side-deals .around-deal-distance{position:relative;margin-bottom:4px;padding-left:15px;font-size:12px;font-weight:bold;color:#000;*zoom:1}
+.component-side-deals .around-deal-distance span{position:absolute;top:0;left:0;width:10px;height:18px;background:url(http://s0.meituan.net/www/css/i/sp-around-icon.veb2bc790.png) 0 -60px no-repeat}

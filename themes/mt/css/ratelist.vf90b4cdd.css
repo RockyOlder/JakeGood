@@ -1,0 +1,49 @@
+.rate-filter{font-size:12px}
+.rate-filter a{text-decoration:none}
+.rate-filter .last{float:right;padding:7px 0;_display:inline}
+.rate-filter .last input{vertical-align:middle}
+.rate-filter .last .withcontent-label{padding-right:10px}
+.rate-filter .last .sort-default,.rate-filter .last .sort-time{padding:0 10px;border-left:1px solid #e1e1e1;color:#222}
+.rate-filter .last .sort-time{padding-right:0}
+.rate-filter .last .selected-sort{color:#999;font-weight:bold;cursor:default}
+.rate-filter .last .sort-icon{display:inline-block;zoom:1;width:10px;height:10px;background:url(http://s0.meituan.net/www/css/i/sp-header-new.v580abde4.png) -95px -77px no-repeat}
+.rate-filter .first{float:left;padding:7px 0 7px 0;margin-right:15px}
+.rate-labels-wrapper{margin:20px 0}
+.rate-labels-wrapper .title{float:left;font-size:12px;line-height:26px}
+.rate-labels-wrapper .labels{zoom:1;overflow:hidden}
+.rate-label{display:inline-block;zoom:1;margin-left:5px;margin-bottom:5px;border:solid 2px #ececec;padding:0 5px;color:#666;font-size:12px;line-height:22px;text-align:center}
+.rate-label:hover{border-color:#a7a7a7;text-decoration:none}
+.rate-label:active,.rate-label--active{border-color:#a7a7a7;color:#FFF;background:#a7a7a7}
+.rate-label--positive{border-color:#fff3e8;color:#fa5d2f}
+.rate-label--positive:hover{border-color:#ff8900}
+.rate-label--positive:active,.rate-label--positive--active{border-color:#ff8900;color:#FFF;background:#ff8900}
+.norate-tip{padding-top:10px;font-size:12px;text-align:center}
+.halfyear-tip{padding:15px 0 5px;font-size:16px;font-weight:bold;text-align:center;background:#fbfbfb}
+.rate-list__item{border-bottom:1px dotted #dbdbdb;padding:20px 10px 10px;color:#222;font-size:12px}
+.rate-list__item strong{color:#f76120}
+.rate-list__item p{margin:10px 0}
+.rate-list__item .info{margin-bottom:10px;color:#999;line-height:18px}
+.rate-list__item .info .user-info{float:left}
+.rate-list__item .info .time{color:#999;margin-left:10px;font-size:10px}
+.rate-list__item .info .common-rating{vertical-align:top;margin:3px 0}
+.rate-list__item .info .rate-status{float:left;font-style:normal}
+.rate-list__item .info .rate-status .status{margin-left:20px;color:#C00}
+.rate-list__item .shopname,.rate-list__item .deal-title a{color:#999}
+.rate-list__item .biz-reply{margin:15px 0 0;color:#c6895a}
+.rate-list__item .content{margin-bottom:10px;word-break:break-all}
+.rate-list__item .content em{background:#fff7a1}
+.rate-list__item .btn-useful{margin:0 5px 0 0;border-color:#dbdbdb;color:#222;background:#FFF;background-image:-moz-linear-gradient(top,#fff,#f6f6f6);background-image:-webkit-linear-gradient(top,#fff,#f6f6f6);background-image:linear-gradient(to bottom,#fff,#f6f6f6)}
+.rate-list__item .btn-useful:hover{background:#dcdcdc;background-image:-moz-linear-gradient(top,#f5f5f5,#dcdcdc);background-image:-webkit-linear-gradient(top,#f5f5f5,#dcdcdc);background-image:linear-gradient(to bottom,#f5f5f5,#dcdcdc)}
+.rate-list__item .btn-useful .number{color:#999}
+.rate-list__item .agree-tips{color:#ee5238}
+.rate-list__item--old{background:#fbfbfb}
+.pic-list{margin-top:15px}
+.pic-list .pic-thumbnails{position:relative;width:665px;height:100px;overflow:hidden}
+.pic-thumbnails .pic-thumbnail-list li{float:left;margin-right:13px}
+.pic-thumbnail{display:inline-block;zoom:1;*display:inline;position:relative;width:100px;height:100px;background:url(http://s0.meituan.net/www/css/i/icon-loading16x16.vecf78228.gif) no-repeat center;overflow:hidden}
+.pic-thumbnail img{min-height:100px;min-width:100px;_height:100px;_width:100px}
+.current .pic-thumbnail,.pic-thumbnail:hover{border:solid 2px #ff8528;width:96px;height:96px}
+.current .pic-thumbnail img,.pic-thumbnail:hover img{position:relative;top:-2px;left:-2px}
+.pic-preview{margin-top:10px}
+.long-rate-view .pic-wrapper{margin:20px 0;background:url(http://s0.meituan.net/www/css/i/bg-ratelist-tile.v65f99ba2.png)}
+.long-rate-view img{display:block;margin:10px auto}
