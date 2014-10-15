@@ -42,7 +42,7 @@ class ItemController extends BaseController {
         $page    = $this->request->getQuery('page', 1);
         $limit   = $this->request->getQuery('display');
         $sort    = $this->request->getQuery('sort');
-        
+     //   print_r($cid);exit;
         $params  = array('cid' => $cid, 'page' => $page); //商品检索参数
         $url_param = array('cid' => $cid);
         

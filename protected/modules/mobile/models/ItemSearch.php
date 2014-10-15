@@ -38,7 +38,7 @@ class ItemSearch extends Item{
         }
         if (isset($keyword) && ! empty($keyword))
         {
-            $condition .= " AND (t.title like :keyword OR t.name like :keyword)";
+            $condition .= " AND (t.name like :keyword OR t.title like :keyword)";
             $params[':keyword'] = '%'.$keyword.'%';
         }
         

@@ -30,9 +30,7 @@
 		<div class="wx_wrap">
 			<div id="brandDiv">
 				<div id="nowDiv">
-				  <p class="mall_title_small">
-				  <span id="nowTitle">每天<em>9:00</em>准时上新</span>
-				  <a href="#">快速找品牌</a></p>
+
 				  <div id="nowList">
 								
 					<div class="mall_item">
