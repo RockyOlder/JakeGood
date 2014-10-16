@@ -114,7 +114,6 @@
                         ?>
                     </div>
                 </div>
-
             </div>
         </div>
         <script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>

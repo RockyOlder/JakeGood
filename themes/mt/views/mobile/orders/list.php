@@ -12,6 +12,7 @@
     </head>
     <body>
         <?php
+     //   print_r($statusOptions);exit;
         $fOrderStatus = $statusOptions;
         $fOrderKey = array_keys($statusOptions);
         $fOrderStatus[0] = '全部';
@@ -44,14 +45,17 @@
                                         <p><span>状<i></i>态：</span><em class="co_red"><?php echo $statusOptions[$order->status]; ?></em></p>
                                         <p><span>总<i></i>价：</span><em class="co_red"><?php echo $order->amount; ?></em></p> 
                                         <?php
-                                        if ($order->is_pay == 0) {
-                                            echo CHtml::link('去支付', $this->createUrl('orders/pay', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
-                                        } elseif ($order->status == 2) {
+                                       if ($order->status == 2) {
+                                           // echo 2;exit;
                                             echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
                                             echo CHtml::link('申请退款', $this->createUrl('refund/order', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
                                         } elseif ($order->status == 3) {
+                                         //   echo 3;exit;
                                             echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
-                                        }
+                                        }else if ($order->is_pay == 0) {
+                                          //  echo 1;exit;
+                                            echo CHtml::link('去支付', $this->createUrl('orders/pay', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
+                                        } 
                                         ?>
                                     </div>
                                     <?php foreach ($order->OrderItem as $itemk => $item) : ?>	

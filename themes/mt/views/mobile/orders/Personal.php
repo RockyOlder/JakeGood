@@ -1,4 +1,4 @@
-<?php //print_r($orders);exit;   ?>
+
 <!DOCTYPE HTML>
 <html lang="zh-CN">
     <head>
@@ -17,6 +17,7 @@
     </head>
     <body>
         <?php
+        
         $fOrderStatus = $statusOptions;
         $fOrderKey = array_keys($statusOptions);
         ?>
@@ -25,7 +26,7 @@
             <div class="my_head">
                 <a class="my_user">
                     <div class="image">
-                        <img width="50" height="50" src="themes/mt/mobile/images/head_portrait.jpg">
+                        <img width="50" height="50" src="/images/head_portrait.jpg">
                     </div>
                     <p class="name"><span class="tag">会员</span><span id="user-name"class="user-info"></span></p>
                 </a>
@@ -33,16 +34,16 @@
             <div class="my_menu">
                 <ul>
                     <li class="tiao">
-                        <a href="<?php echo $this->createUrl('/mobile/order/index'); ?>" class="menu_1">全部订单</a>
+                        <a href="<?php echo $this->createUrl('/mobile/order/index'); ?>" class="menu_1"><span><?php echo $total; ?></span>全部订单</a>
                     </li>
                     <li class="tiao">
-                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[1])); ?>" class="menu_2"><span><?php echo $total; ?></span>待付款</a>
+                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[1])); ?>" class="menu_2"><span><?php if ($notpaying>0){echo $notpaying;} ?></span>待付款</a>
                     </li>
                     <li class="tiao">
-                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[3])); ?>" class="menu_3"><span></span>配送中</a>
+                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[3])); ?>" class="menu_3"><span><?php if ($payment>0){echo $payment;} ?></span>配送中</a>
                     </li>
                     <li class="tiao">
-                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[6])); ?>" class="menu_4">退换货</a>
+                        <a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[6])); ?>" class="menu_4"><span><?php if ($sixstarts>0){echo $sixstarts;} ?></span>退换货</a>
                     </li>
                 </ul>
             </div>

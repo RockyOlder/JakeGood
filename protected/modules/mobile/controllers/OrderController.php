@@ -111,6 +111,7 @@ class OrderController extends BaseController {
     }
 
     public function actionList() {
+
         $filter = $this->request->getQuery('filter');
         $criteria = new CDbCriteria;
         $criteria->addCondition('t.market_id = ' . $this->market->getPrimaryKey());
@@ -143,14 +144,27 @@ class OrderController extends BaseController {
         $model = new Order('search');
 
         $count = $model->count($criteria);
+
         $pages = new CPagination($count);
         $pages->pageSize = 10;
         $pages->applyLimit($criteria);
 
         $orders = $model->findAll($criteria);
-        $total = count($orders);
+
+        foreach ($orders as $k => $order) {
+            if ($order->status == 1) {
+                $onestarts[] = $order->status;
+            } elseif ($order->status == 3) {
+                $threestarts[] = $order->status;
+            } elseif ($order->status == 6) {
+                $sixstarts[] = $order->status;
+            }
+        }
         $this->data['filter'] = $filter;
-        $this->data['total'] = $total;
+        $this->data['total'] = count($orders);
+        $this->data['payment'] = count($threestarts);
+        $this->data['sixstarts'] = count($sixstarts);
+        $this->data['notpaying'] = count($onestarts);
         $this->data['orders'] = $orders;
         $this->data['pages'] = $pages;
     }

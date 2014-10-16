@@ -38,3 +38,14 @@ $(function(){
 		$(this).removeClass("dropdown--open")
 	});
 });
+//浮动导航滑动网页
+$(window).scroll(function(){
+	if($("#yScroll1").offset().top<$(document).scrollTop()+20){
+          //  alert(1)
+		$("#yScroll1").addClass("common-fixed");
+		//$("#J-nav-buy").show();	
+	}else{
+		$("#yScroll1").removeClass("common-fixed");
+		//$("#J-nav-buy").hide();	
+	}
+});

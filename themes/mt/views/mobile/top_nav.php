@@ -28,6 +28,7 @@
     </head>
 
     <body>
+                <?php  $id = Yii::app()->user->getId(); ?>
         <div class="WX_search">
             <form action="###" class="WX_search_frm" onsubmit="return false;">
                 <input type="search" class="WX_search_txt" ptag="37110.50.1" id="topSearchTxt" placeholder="搜索京东全部商品">
@@ -129,12 +130,12 @@
             </div>
         </div>
 
-        <div class="wx_nav">
-            <a href="#" class="nav_index">购物</a>
-            <a href="#" class="nav_search on">搜索</a>
-            <a href="#" class="nav_shopcart">购物车</a>
-            <a href="#" class="nav_me">个人中心</a>
-        </div>
+    <div class="wx_nav">
+        <a class="nav_index on" href="<?php echo Yii::app()->createUrl('/mobile/obj/ceshi'); ?>">购物</a>
+        <a class="nav_search" href="<?php echo Yii::app()->createUrl('/mobile/item/list',array('p' => 1)); ?>">搜索</a>
+        <a class="nav_shopcart" href="<?php if (!empty($id)){echo Yii::app()->createUrl('/mobile/cart');}else{echo Yii::app()->createUrl('/mobile/login');} ?>">购物车</a>
+        <a class="nav_me" href="<?php if (!empty($id)){echo Yii::app()->createUrl('/mobile/order/personal');}else{echo Yii::app()->createUrl('/mobile/login');} ?>">个人中心</a>
+    </div>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript">
             $(function(){
