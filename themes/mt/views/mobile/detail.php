@@ -26,7 +26,7 @@
         <div id="loopImgDiv" class="mod_slider">
             <div class="inner">
                 <ul id="loopImgUl" class="pic_list" style="left: 0px;">
-                           <li><img src=" <?php echo $item->pic_url; ?>"></li>
+                    <li><img src=" <?php echo $item->pic_url; ?>"></li>
                 </ul>
             </div>
         </div>
@@ -69,14 +69,15 @@
                 <div class="sku_wrap">            
                     <div id="propertyDiv">
                     </div>
-                    <div id="skuNum" class="sku sku_num">
-                        <h3>数量</h3>
-                        <div class="num_wrap">
-                            <span id="minus" class="minus minus_disabled"></span>
-                            <input type="tel" value="1" id="buyNum" class="num">
-                            <span id="plus" class="plus"></span>
+                    <form action="/mobile/order/confirm" method="POST" id="form_cart">
+                        <div id="skuNum" class="sku sku_num">
+                            <h3>数量</h3>
+                            <div class="num_wrap">
+                                <span id="minus" class="minus minus_disabled"></span>
+                                <input type="tel" value="1" id="buyNum" class="num" name="quantity">
+                                <span id="plus" class="plus"></span>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -140,7 +141,9 @@
                 <!-- 评论 -->
             </div>
         </div>
-
+        <input type="hidden" name="item_id" value="<?php echo $item->item_id; ?>" />
+        <input type="hidden" name="sku_id" id="sku_id" value="0" />
+        <input type="hidden" name="from" value="detail" />
         <!-- btn_wrap_nocart  onclick="addToCart(item)"   -->
         <div id="btnTools" class="btn_wrap btn_wrap_fixed">
             <a id="fav" href="javascript:;" class="btn_fav" isSelected="false" onclick="addCollection(<?php echo $item->item_id; ?>)"><i></i></a>
@@ -148,46 +151,47 @@
                 <a id="addCart2" href="javascript:;" class="btn btn_cart"  >加入购物车</a>
                 <a id="buyBtn2" href="javascript:;" class="btn btn_buy">立即购买</a>
             </div>
-            <!-- onclick="addCarts(item)"  -->
-            <a href="#" class="cart_wrap"id="cat_if" >
-                <i id="cartNum" class="i_cart"></i>
-                <span class="cart"></span>
-                <span id="popone" class="add_num"></span>
-                <i id="tishi" style="display:none;width: 16px; height: 16px; background: url(images/red_cart.png) no-repeat scroll 0% 0% transparent; position: absolute; left: 32px; top: 0px; text-align: center; line-height: 16px; color: red; font-weight: bold;">0</i>
-            </a>
+        </form>
+        <!-- onclick="addCarts(item)"  -->
+        <a href="#" class="cart_wrap"id="cat_if" >
+            <i id="cartNum" class="i_cart"></i>
+            <span class="cart"></span>
+            <span id="popone" class="add_num"></span>
+            <i id="tishi" style="display:none;width: 16px; height: 16px; background: url(images/red_cart.png) no-repeat scroll 0% 0% transparent; position: absolute; left: 32px; top: 0px; text-align: center; line-height: 16px; color: red; font-weight: bold;">0</i>
+        </a>
+    </div>
+
+    <div id="quckArea" class="wx_aside">
+        <!--<a class="btn_more" id="quckIco2" href="javascript:void(0);">更多</a> -->
+        <a class="btn_top btn_top_active" style="display: none;" id="goTop" href="javascript:;">返回顶部</a>
+
+        <div id="quckMenu" class="wx_aside_item">
+            <a class="item_fav" href="http://mm.wanggou.com/my/goods_fav.shtml?ptag=7001.1.22">我的收藏</a>
+            <a class="item_history" href="http://mm.wanggou.com/my/recently.shtml">最近浏览</a>
+            <a class="item_uc" id="persLink" onclick="this.href += encodeURIComponent(location.href)" href="http://mm.wanggou.com/my/index.shtml?ptag=7001.1.18&amp;backurl=">个人中心</a>
         </div>
+    </div>
 
-        <div id="quckArea" class="wx_aside">
-            <!--<a class="btn_more" id="quckIco2" href="javascript:void(0);">更多</a> -->
-            <a class="btn_top btn_top_active" style="display: none;" id="goTop" href="javascript:;">返回顶部</a>
+    <div style="display: none;" id="blackCover" class="mod_slider_mask"></div>
 
-            <div id="quckMenu" class="wx_aside_item">
-                <a class="item_fav" href="http://mm.wanggou.com/my/goods_fav.shtml?ptag=7001.1.22">我的收藏</a>
-                <a class="item_history" href="http://mm.wanggou.com/my/recently.shtml">最近浏览</a>
-                <a class="item_uc" id="persLink" onclick="this.href += encodeURIComponent(location.href)" href="http://mm.wanggou.com/my/index.shtml?ptag=7001.1.18&amp;backurl=">个人中心</a>
-            </div>
+    <div style="display: none" id="imageViewer" class="image_viewer">
+        <div class="inner"><img id="fullImg"></div>
+    </div>
+
+</div> <!--part1 end-->
+
+<div style="display:none" id="part2">
+    <div class="WX_bar">
+        <div id="addrBack" class="WX_bar_back">
+            <a href="javascript:;"></a>
         </div>
-
-        <div style="display: none;" id="blackCover" class="mod_slider_mask"></div>
-
-        <div style="display: none" id="imageViewer" class="image_viewer">
-            <div class="inner"><img id="fullImg"></div>
-        </div>
-
-    </div> <!--part1 end-->
-
-    <div style="display:none" id="part2">
-        <div class="WX_bar">
-            <div id="addrBack" class="WX_bar_back">
-                <a href="javascript:;"></a>
-            </div>
-            <div class="WX_bar_tit">配送地址</div>
-        </div>
-        <div id="addrList" class="wx_wrap area_select"></div>
-    </div> <!--part2-->
-    <script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript">
+        <div class="WX_bar_tit">配送地址</div>
+    </div>
+    <div id="addrList" class="wx_wrap area_select"></div>
+</div> <!--part2-->
+<script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
       
-    </script>
+</script>
 </body>
 </html>

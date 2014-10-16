@@ -24,7 +24,7 @@ class ObjController extends MobileController {
     public function actionList() {
 
         $this->layout = FALSE;
-        $this->template = '/orders/list';
+        $this->template = '/list';
         $cid = $this->request->getQuery('cid');
         //print_r($cid);exit;
         $ppath = $this->request->getQuery('ppath');   //属性检索
@@ -129,7 +129,6 @@ class ObjController extends MobileController {
         $this->data['sort'] = $sort;
         //   print_r($this->data['items']);exit;
     }
-
     public function getProps($cid, $prop_param, $url_param) {
         if (!$cid)
             return array();

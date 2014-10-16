@@ -1180,6 +1180,7 @@ body {
     z-index: 100;
 }
 .WX_backtop:after {
+    
     background-position: -115px 0;
     content: " ";
     display: block;
@@ -1225,7 +1226,7 @@ body {
 }
 .wx_history a:after {
     color: #0d7eff;
-    content: "¼ÌÐøä¯ÀÀ";
+    content: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
     display: block;
     height: 20px;
     line-height: 20px;
@@ -1647,7 +1648,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 55px;
     color: #fff;
-    content: "ÊÛóÀ";
+    content: "ï¿½ï¿½ï¿½ï¿½";
     font-size: 18px;
     height: 54px;
     left: 50%;

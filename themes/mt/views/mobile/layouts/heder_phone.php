@@ -79,7 +79,7 @@
     </div>
     <div class="wx_nav">
         <a class="nav_index on" href="<?php echo Yii::app()->createUrl('/mobile/obj/ceshi'); ?>">购物</a>
-        <a class="nav_search" href="#">搜索</a>
+        <a class="nav_search" href="<?php echo Yii::app()->createUrl('/mobile/item/list',array('p' => 1)); ?>">搜索</a>
         <a class="nav_shopcart" href="<?php if (!empty($id)){echo Yii::app()->createUrl('/mobile/cart');}else{echo Yii::app()->createUrl('/mobile/login');} ?>">购物车</a>
         <a class="nav_me" href="<?php if (!empty($id)){echo Yii::app()->createUrl('/mobile/order/personal');}else{echo Yii::app()->createUrl('/mobile/login');} ?>">个人中心</a>
     </div>

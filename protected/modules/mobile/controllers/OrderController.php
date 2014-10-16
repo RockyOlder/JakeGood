@@ -31,7 +31,7 @@ class OrderController extends BaseController {
 
     public function actionIndex() {
         // print_r($_REQUEST);exit;
-         $this->template = '/orders/list';
+        $this->template = '/orders/list';
         $this->actionList();
     }
 
@@ -42,13 +42,77 @@ class OrderController extends BaseController {
         $this->actionList();
     }
 
+    public function actionListRefund() {
+        $this->template = 'listRefund';
+        $model = new Order('search');
+
+        $orders = $model->findAll('store_id=:store_id AND is_pay=1 AND status = 6', array(':store_id' => Yii::app()->user->getId()));
+
+        $this->data['orders'] = $orders;
+    }
+
+    public function actionDetail() {
+        $sn = $this->request->getQuery('sn');
+        $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
+
+        if ($order) {
+            $orderShip = OrderShip::model()->findByAttributes(array('order_id' => $order->order_id));
+            $this->data['orderShip'] = $orderShip;
+            $this->data['order'] = $order;
+            $this->template = 'detail';
+        } else {
+            parent::renderError('订单不存在', '');
+        }
+    }
+
+    public function actionRemove($sn) {
+        $sn = $this->request->getQuery('sn');
+        $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
+        if ($order) {
+            $order->user_del = 1;
+            $order->update();
+        }
+        $this->request->redirect($this->createUrl('index'));
+    }
+
+    public function actionDelete($id) {
+        $sn = $this->request->getQuery('sn');
+        $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
+        if ($order) {
+            $order->user_del = 1;
+            $order->update();
+        }
+        $this->request->redirect($this->createUrl('index'));
+    }
+
+    public function actionPay() {
+        $sn = $this->request->getQuery('sn');
+        $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
+
+        if ($order && $order->is_pay == 0) {
+            $items = $order->OrderItem;
+            $ext = count($items) > 1 ? '...等多件' : '';
+            $arr = array(
+                'seller' => (int) $order->store_id, //商家帐户
+                'outer_sn' => (string) $order->sn, //订单号
+                'title' => (string) $items[0]['title'] . $ext, //订单说明/标题
+                'total' => (float) $order->amount, //支付总额
+                'item_total' => (float) $order->item_total, //商品总额
+                'express_fee' => (string) $order->ship_fee,
+                'address' => (string) $order->receiver_address,
+                'order_time' => (int) $order->created,
+                'order_url' => (string) Yii::app()->createAbsoluteUrl('member/order/detail', array('sn' => $order->sn)),
+            );
+            Yii::app()->CGB->setOrder($arr);
+            Yii::app()->CGB->setMarket($this->market);
+            Yii::app()->CGB->checkout();
+        }
+        die;
+    }
+
     public function actionList() {
-
-
         $filter = $this->request->getQuery('filter');
-
         $criteria = new CDbCriteria;
-
         $criteria->addCondition('t.market_id = ' . $this->market->getPrimaryKey());
         $criteria->addCondition('user_id = ' . Yii::app()->user->getId());
         $criteria->addCondition('user_del = 0');
@@ -84,9 +148,9 @@ class OrderController extends BaseController {
         $pages->applyLimit($criteria);
 
         $orders = $model->findAll($criteria);
-        $total= count($orders);
+        $total = count($orders);
         $this->data['filter'] = $filter;
-        $this->data['total']=$total;
+        $this->data['total'] = $total;
         $this->data['orders'] = $orders;
         $this->data['pages'] = $pages;
     }

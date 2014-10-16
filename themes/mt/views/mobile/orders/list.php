@@ -8,6 +8,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="/themes/mt/mobile/css/order_list.css" />
+        
     </head>
     <body>
         <?php
@@ -27,7 +28,7 @@
             </div>
             <div class="my_order_wrap">
                 <!--  height:100%;width:240px;overflow:scroll  -->
-                <div id="cont" class="my_order_inner" style=" height:100%;overflow:scroll;">
+                <div id="cont" class="my_order_inner" style=" height:100%;">
 
                     <!-- S 所有订单 -->
                     <div class="my_order">

@@ -76,7 +76,9 @@ var caculShop = function () {
     });
 };
 $(function(){
-
+     $('#buyBtn2').click(function(){
+        $('#form_cart').submit(); 
+     })
     var total = 0;
     $('.J-total').each(function () {
         total += parseFloat($(this).text());

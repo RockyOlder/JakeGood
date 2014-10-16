@@ -988,6 +988,7 @@ body {
 .my_order_inner {
 	position: relative;
 	min-height: 300px;
+     
 	-webkit-transition: -webkit-transform .25s ease
 }
 
@@ -1180,9 +1181,10 @@ body {
 }
 
 .order_head .oh_btn {
+       margin-left:20px;
 	position: absolute;
 	top: 50%;
-	right: 30px;
+	right: 0px;
 	margin-top: -20px;
 	display: block;
 	width: 80px;
