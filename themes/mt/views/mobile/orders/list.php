@@ -25,7 +25,9 @@
     </head>
     <body>
         <?php
-        //   print_r($statusOptions);exit;
+       $host=substr(Yii::app()->request->getUrl(),-1);
+         //echo $host;exit;
+        //   print_r($statusOptions);exit;   cur
         $fOrderStatus = $statusOptions;
         $fOrderKey = array_keys($statusOptions);
         $fOrderStatus[0] = '全部';
@@ -35,11 +37,11 @@
 
             <div class="my_nav">
                 <ul id="nav">
-                    <li class="cur" no="1" >
+                    <li class="<?php if($host==0){echo 'cur';} ?>" no="1" >
                         <?php echo CHtml::link($fOrderStatus[0], $this->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[0])), array('class' => 'oh')); ?>
 
-                    <li no="2" class=""><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[1])); ?>"><?php echo $fOrderStatus[1]; ?></a></li>
-                    <li no="3" class=""><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[3])); ?>"><?php echo $fOrderStatus[3]; ?></a></li>
+                    <li no="2" class="<?php if($host==1){echo 'cur';} ?>"><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[1])); ?>"><?php echo $fOrderStatus[1]; ?></a></li>
+                    <li no="3" class="<?php if($host==3){echo 'cur';} ?>"><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[3])); ?>"><?php echo $fOrderStatus[3]; ?></a></li>
                 </ul>
             </div>
             <div class="my_order_wrap">
@@ -98,21 +100,25 @@
             </div>
         </div>
         <script>
-            $(function(){
-                var str=location.href;
-                var num=str.indexOf("?") 
-                var ceshi= str.substr(-1)
-                $('.my_nav ul li').click(function(){
-                    if(ceshi==1){
-                        $(this).removeClass("cur");
-                        $(this).addClass("cur");
-                    }else if(ceshi==3){
-                        $(this).addClass("cur");
-                    }
-                      
-                      
-                })
-            });
+//            $(function(){
+//                var str=location.href;
+//                var num=str.indexOf("?") 
+//                var ceshi= str.substr(-1)
+//                $('.my_nav ul li').each(function(){
+//                    if(ceshi==1){
+//                        $('.my_nav ul li').click(function(){
+//                            $(this).removeClass("cur");
+//                            $(this).addClass("cur");
+//                                
+//                        });
+//
+//                    }else if(ceshi==3){
+//                        $(this).addClass("cur");
+//                    }
+//                      
+//                      
+//                })
+//            });
         </script>
     </body>
 </html>
