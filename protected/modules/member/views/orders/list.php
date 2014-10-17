@@ -95,11 +95,7 @@
                             </td>
                             <td rowspan="<?php echo $countItems; ?>">
                                 <?php 
-                                    if ($order->is_pay == 0)
-                                    {
-                                        echo CHtml::link('付款', $this->createUrl('orders/pay', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
-                                    }
-                                    elseif ($order->status == 2)
+                              if ($order->status == 2)
                                     {
                                         echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
                                         echo CHtml::link('申请退款', $this->createUrl('refund/order', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
@@ -107,7 +103,11 @@
                                     elseif ($order->status == 3)
                                     {
                                         echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
+                                    }else if ($order->is_pay == 0)
+                                    {
+                                        echo CHtml::link('付款', $this->createUrl('orders/pay', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
                                     }
+                                    
                                 ?>
                             </td>
                         <?php endif; ?>

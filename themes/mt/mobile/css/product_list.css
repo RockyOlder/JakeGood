@@ -178,9 +178,9 @@ body {
     min-height: 375px;
 }
 @media only screen and (max-height: 480px) {
-.wx_wrap {
-    min-height: 360px;
-}
+    .wx_wrap {
+        min-height: 360px;
+    }
 }
 .wx_footer {
     margin: 50px 0;
@@ -253,7 +253,7 @@ body {
     width: 24px;
 }
 @keyframes gif {
-0% {
+    0% {
     transform: rotate(0deg);
 }
 100% {
@@ -546,9 +546,10 @@ body {
     font-size: 12px;
 }
 .wx_nav a:before, .WX_backtop:after, .wx_aside .btn_more:after, .wx_aside .btn_top:after {
-    background-image: url("/wx/img/mall/icon_nav.png?t=4");
+    background-image: url(../images/icon_nav.png);
     background-repeat: no-repeat;
     background-size: 161px 46px;
+   -webkit-background-size: 161px 46px
 }
 .wx_nav {
     border-top: 1px solid #ddd;
@@ -556,7 +557,6 @@ body {
     height: 49px;
     left: 0;
     overflow: hidden;
-    position: fixed;
     width: 100%;
     z-index: 900;
 }
@@ -945,7 +945,7 @@ body {
     background-position: -132px -88px;
 }
 @keyframes an_refresh {
-0% {
+    0% {
     transform: rotate(0deg);
 }
 100% {
@@ -1180,7 +1180,7 @@ body {
     z-index: 100;
 }
 .WX_backtop:after {
-    
+
     background-position: -115px 0;
     content: " ";
     display: block;

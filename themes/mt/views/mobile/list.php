@@ -11,6 +11,7 @@
         <meta http-equiv="x-dns-prefetch-control" content="on" />
         <link rel="stylesheet" type="text/css" href="/themes/mt/mobile/css/product_list.css" />
         <link rel="stylesheet" type="text/css" href="/themes/mt/css/cate-nav.list.css" />
+
         <style type="text/css">
             .paginator--large .next a{width:60px;padding:5px 16px 5px 10px;margin-left: 130px; background:white url(/themes/mt/img/sp-header-new.v580abde4.png) no-repeat -38px -111px}
             .paginator--large .previous a{width:60px;padding:5px 10px 5px 16px;margin-left: -10px;background:white url(/themes/mt/img/sp-header-new.v580abde4.png) no-repeat 0 -111px}    
@@ -25,18 +26,17 @@
     <body>
         <div id="J_bar1" class="hd_bar fixed in">
             <form id="searchForm" class="hd_search_frm hd_search_frm_focus" action="/mobile/item/list">
-                <input type="search" placeholder="搜索京东全部商品" autocomplete="off" id="keyWord" class="hd_search_txt hd_search_txt_null" name="q">
+                <input type="search" placeholder="搜索全部商品" autocomplete="off" id="keyWord" class="hd_search_txt hd_search_txt_null" name="q">
                 <a id="searchClearBtn" href="javascript:;" class="hd_search_clear">x</a>
             </form>
             <div class="hd_me">
                 <a class="WX_search_btn_blue hide" id="searchBtn" href="javascript:">搜索</a>
                 <a class="hd_search_btn hide" id="cancelBtn" href="javascript:">取消</a>
               <!--  <input type="submit" cg="0-1-5" class="hd_search_btn" id="filterBtn" value="筛选"> -->
-                	<a cg="0-1-5" class="hd_search_btn" id="filterBtn" href="javascript:">筛选</a>
+                <a cg="0-1-5" class="hd_search_btn" id="filterBtn" href="javascript:">筛选</a>
             </div>
         </div>
         <div class="wx_wrap">
-
             <div class="" id="searchResBlock">
                 <div id="filterBlock" class="sf_layer_wrap">
                 </div>    
@@ -55,20 +55,20 @@
 
                 <div id="brandAdv" class="mod_itemlist_small mod_search_rec hide"></div>
 
-             <!--       <div id="sNull01" class="s_null hide">
-                    <h5>抱歉，没有找到符合条件的商品。</h5>
-                </div>
-
-                <div id="sNull02" class="s_null hide">
-                    <h5>抱歉，没有找到符合条件的商品。</h5>
-                    <p>我们为您去除了筛选条件，得到以下搜索结果。</p>
-                </div>
-
-            <div id="sFound" class="s_found">
-                    <p class="found_tip_2">
-                        找到相关商品 <span id="totResult">3187</span> 件。<span id="addName" class="location">配送至：北京</span>
-                    </p>
-                </div>-->
+                <!--       <div id="sNull01" class="s_null hide">
+                       <h5>抱歉，没有找到符合条件的商品。</h5>
+                   </div>
+   
+                   <div id="sNull02" class="s_null hide">
+                       <h5>抱歉，没有找到符合条件的商品。</h5>
+                       <p>我们为您去除了筛选条件，得到以下搜索结果。</p>
+                   </div>
+   
+               <div id="sFound" class="s_found">
+                       <p class="found_tip_2">
+                           找到相关商品 <span id="totResult">3187</span> 件。<span id="addName" class="location">配送至：北京</span>
+                       </p>
+                   </div>-->
 
                 <div id="loadingLogo2" class="wx_loading2 hide">
                     <i class="wx_loading_icon"></i>
@@ -97,7 +97,9 @@
                             </a>
                         </div>
                     <?php endforeach; ?>
+
                     <div class="paginator-wrapper">
+                    <!--    <a id="return_list" href="<?php echo Yii::app()->createUrl('/mobile/obj/ceshi'); ?>" >返回</a>   -->
                         <?php
                         $this->widget('ILinkPager', array(
                             'currentPage' => $page - 1,
@@ -114,8 +116,23 @@
                         ?>
                     </div>
                 </div>
+                <div class="wx_nav">
+                    <a class="nav_index on" href="<?php echo Yii::app()->createUrl('/mobile/obj/ceshi'); ?>">购物</a>
+                    <a class="nav_search" href="<?php echo Yii::app()->createUrl('/mobile/item/list', array('p' => 1)); ?>">搜索</a>
+                    <a class="nav_shopcart" href="<?php if (!empty($id)) {
+                            echo Yii::app()->createUrl('/mobile/cart');
+                        } else {
+                            echo Yii::app()->createUrl('/mobile/login');
+                        } ?>">购物车</a>
+                    <a class="nav_me" href="<?php if (!empty($id)) {
+                            echo Yii::app()->createUrl('/mobile/order/personal');
+                        } else {
+                            echo Yii::app()->createUrl('/mobile/login');
+                        } ?>">个人中心</a>
+                </div>
             </div>
         </div>
+
         <script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript">
             $(function(){
@@ -129,8 +146,6 @@
                 $('#filterBtn').click(function(){
                     $('form').submit();
                 })
-                
-                
             });
         </script>
     </body>

@@ -12,7 +12,17 @@
         <script src="/themes/mt/js/mobile.js"></script>
     </head>
     <style type="text/css">
-        .shop_delete{ float: right; margin-top: 27px; }.deal-component-quantity{ margin-top: 5px;}.f-text J-quantity J-cart-quantity{ border-left:1px; border-right:1px;}
+        .shop_delete{          
+            background: #e4393c;
+            font-size: 14px;
+            float: right;
+            color: white;
+            height: 40px;
+            width: 80px;
+            text-align: center;
+            line-height: 40px;
+        }.deal-component-quantity{ margin-top: 5px;}.f-text J-quantity J-cart-quantity{ border-left:1px; border-right:1px;}
+        
     </style>
     <body>
         <?php  $id = Yii::app()->user->getId(); ?>

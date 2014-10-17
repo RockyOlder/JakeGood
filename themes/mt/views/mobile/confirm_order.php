@@ -1,4 +1,4 @@
-<?php //echo 3;exit;          ?>
+
 <!DOCTYPE HTML>
 <html lang="zh-CN">
     <head>
@@ -27,7 +27,7 @@
                         <?php foreach ($items as $store_id => $v): ?>
                             <div class="address_bar">
                                 <a href="javascript:;" onclick="location.href='#wg.addrctrl.view=show&amp;maxlevel=3'"> 
-                                  
+
                                     <span id="addrNameTxt">商家：<?php echo Store::model()->findByPk($store_id)->name; ?></span> 
                                     <i class="icon"></i>
                                 </a>
@@ -59,7 +59,7 @@
 
                                         <?php endforeach; ?>
                                     <?php endforeach; ?>
-
+                                    <?php echo CHtml::hiddenField("ship[{$store_id}]", 'express'); ?>
                                     <div class="foot">             
                                         <p>应付：<span class="price_attr-suit-totalprice"></span></p>         
                                     </div>    
@@ -73,9 +73,7 @@
 
 
         <div id="mainViewFoot">
-            <p id="outofstockTip" style="display: none;" class="cart_alert">部分商品在所选地区缺货，请取消勾选后结算</p>
             <div id="checkAllBtn" attr-tag="checkMain" name="checkgroup" class="pay_bar selected"> 
-                <i class="icon_select"></i>
                 <span class="amount">已选<strong class="amount__num" id="J-cart-amount">1</strong>件商品</span>
                 <strong>应付总额</strong>：<span class="inline-block money">¥<strong id="J-cart-total"></strong></span>
                 <input type="submit" id="shopCartConfirm" class="btn_pay" name="buy" value="提交订单"></a>

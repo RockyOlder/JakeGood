@@ -1,0 +1,132 @@
+a:2:{i:0;a:2:{i:0;s:5107:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div>
+<p><strong>- 代金券</strong>（1张，价值100元）</p>
+<p>注：万达店，高明店，天佑城店，周六，周日，10月1日－10月3日，不可使用</p>
+</div>
+
+
+		</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-05-01至2014-12-31</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">无需预约，如遇消费高峰时段您可能需要排队</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">可与其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/c720a9ea5bdadc59b49d6162d1d92fc6(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/ac659ddfb85695e298191fa743ed8aec(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s2.dpfile.com/pc/mc/1e40a79aaa881a14fdadfcde236076f3(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/737929f3c0032826fa26c00842e37f22(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/f55640656e0db9cd6c3ae09efe0f58a7(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/0e715e892e1022ae5c9a1750caf12058(450x1024)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">商户介绍</span></h3>
+            <div>       乔家面馆坐落在繁华地段，便利的交通令所有顾客都可以顺利到达。经验繁多的厨师，让菜品变得美味。每一道菜品的食材，都经过严格把关。让你的就餐变得安全无忧。店内装修温馨舒适，周到的服务让你宾至如归。</div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s1.dpfile.com/pc/mc/c36ec50b4bb08ef5f7becf8268beccb8(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/2b157bd5a516d45fb862eecb561f31eb(450x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s2.dpfile.com/pc/mc/30332e04cc91d50604a177724bfcd011(450x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_main_comment"><a rel="nofollow" track="|1|module#5_tab_tgreview,action#click,dealgrp_id#6048750" href="#">团购评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+                <span class="tab-item " data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#6048750" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box J_main_comment imgloading">
+                </div>
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

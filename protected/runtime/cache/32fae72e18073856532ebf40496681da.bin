@@ -1,1 +1,160 @@
-a:2:{i:0;a:2:{i:0;s:0:"";i:1;N;}i:1;N;}
+a:2:{i:0;a:2:{i:0;s:5650:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div class="detail-tit"></div>
+<table width="100%" cellpadding="0" cellspacing="0" class="detail-table">
+<thead><tr>
+<th width="50%">名称</th>
+		<th width="25%">数量</th>
+		<th width="25%">单价</th>
+	</tr></thead>
+<tbody>
+<tr>
+<td>代金劵</td>
+            <td class="tc">1张</td>
+            <td class="tc">100元</td>
+		</tr>
+<tr class="total">
+<td></td>
+		<td class="tc">总价值<br><strong>团购价</strong>
+</td>
+		<td class="tc">100元<br><strong>69.9元</strong>
+</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-09-29至2015-03-05</p>
+            </dd>
+        </dl>
+<dl>
+<dt>除外日期</dt>
+            <dd>
+                <p class="listitem">国庆节不可用</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">无需预约，如遇消费高峰时段您可能需要排队</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">不再与店内其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>商家服务</dt>
+            <dd>
+                <p class="listitem">提供免费WiFi</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/7777d9bfe445e3bc202362e9cd33bedd(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/b6ed90e5a220981e6cc9bdc904c8c7b5(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/7b9bcc7b0bcaaa8d19f67cd934a660d9(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/1765a48229939856924d679bce4bb588(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/84da37dc1b3868142c29ba34588a50da(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/f662c940bb528a7dc1603093f8ace2b7(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/d7f908801b3a53e916488dc9fab3a9b6(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/92583b0d088de28ef5294502229ca49f(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">商户介绍</span></h3>
+            <div>　　财鼎牛莊是一家环境雅致、出品地道的正宗火锅店，其特色牛肉丸、牛肉等深受消费者喜爱，来往食客络绎不绝，是一个大家吃牛肉火锅的好地方。牛肉切得厚薄均匀，“鲜嫩”中带有“嚼劲”，涂上酱料，会给您一种完全不同的味觉冲击。餐厅内的装修高档，灯光和谐，环境宽敞整洁。</div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/021a685f12b47eb03ea29cba43c5da7b(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/cd8034c1e934435439d2764a4d88cc7c(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#8184732" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

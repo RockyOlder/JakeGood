@@ -90,7 +90,7 @@ class OrderController extends BaseController {
     
     public function actionSave()
     {
-      //  print_r($_REQUEST);exit;
+        print_r($_REQUEST);exit;
         $orders = $this->insertOrder();
        // echo 1;exit;
         if ($orders !== FALSE)

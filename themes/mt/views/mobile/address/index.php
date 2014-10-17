@@ -13,7 +13,7 @@
     </head>
     <style>
         #update{
-            background: #e4393c;
+            background: blue;
             font-size: 16px;
             float: right;
             color: white;

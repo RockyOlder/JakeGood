@@ -8,11 +8,24 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="/themes/mt/mobile/css/order_list.css" />
-        
+        <script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>
+        <style>
+            #update{
+                background: blue;
+                font-size: 14px;
+                float: right;
+                color: white;
+                height: 40px;
+                width: 80px;
+                text-align: center;
+                line-height: 40px;
+                margin-top: -30px;
+            }      
+        </style>
     </head>
     <body>
         <?php
-     //   print_r($statusOptions);exit;
+        //   print_r($statusOptions);exit;
         $fOrderStatus = $statusOptions;
         $fOrderKey = array_keys($statusOptions);
         $fOrderStatus[0] = '全部';
@@ -22,7 +35,9 @@
 
             <div class="my_nav">
                 <ul id="nav">
-                    <li class="cur" no="1" ><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[0])); ?>"><?php echo $fOrderStatus[0]; ?></a></li>
+                    <li class="cur" no="1" >
+                        <?php echo CHtml::link($fOrderStatus[0], $this->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[0])), array('class' => 'oh')); ?>
+
                     <li no="2" class=""><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[1])); ?>"><?php echo $fOrderStatus[1]; ?></a></li>
                     <li no="3" class=""><a href="<?php echo Yii::app()->createUrl('/mobile/order', array('filter[orderStatus]' => $fOrderKey[3])); ?>"><?php echo $fOrderStatus[3]; ?></a></li>
                 </ul>
@@ -45,22 +60,24 @@
                                         <p><span>状<i></i>态：</span><em class="co_red"><?php echo $statusOptions[$order->status]; ?></em></p>
                                         <p><span>总<i></i>价：</span><em class="co_red"><?php echo $order->amount; ?></em></p> 
                                         <?php
-                                       if ($order->status == 2) {
-                                           // echo 2;exit;
-                                            echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
-                                            echo CHtml::link('申请退款', $this->createUrl('refund/order', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini', 'target' => '_blank'));
+                                        if ($order->status == 2) {
+                                            // echo 2;exit;
+                                            echo CHtml::link('确认收货', $this->createUrl('/mobile/order/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay'));
+                                            echo CHtml::link('申请退款', $this->createUrl('refund/order', array('sn' => $order->sn)), array('class' => 'btn-hot btn-mini'));
                                         } elseif ($order->status == 3) {
-                                         //   echo 3;exit;
-                                            echo CHtml::link('确认收货', $this->createUrl('orders/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
-                                        }else if ($order->is_pay == 0) {
-                                          //  echo 1;exit;
-                                            echo CHtml::link('去支付', $this->createUrl('orders/pay', array('sn' => $order->sn)), array('class' => 'oh_btn toPay', 'target' => '_blank'));
-                                        } 
+                                            //   echo 3;exit;
+                                            echo CHtml::link('确认收货', $this->createUrl('/mobile/order/confirm', array('sn' => $order->sn)), array('class' => 'oh_btn toPay'));
+                                        } else if ($order->is_pay == 0) {
+                                            //  echo 1;exit;
+                                            echo CHtml::link('去支付', $this->createUrl('/mobile/order/pay', array('sn' => $order->sn)), array('class' => 'oh_btn toPay'));
+                                        }
                                         ?>
+                                        <a id="update" href="<?php echo $this->createUrl('/mobile/order/detail', array('sn' => $order->sn)); ?>">查看详情</a>
                                     </div>
                                     <?php foreach ($order->OrderItem as $itemk => $item) : ?>	
                                         <div class="order_item">
-                                            <a class="oi_content" page="1">
+
+                                            <a href="<?php echo $this->createUrl('/mobile/item/detail', array('item_id' => $item->item_id)); ?>" class="oi_content" page="1">
                                                 <img width="50" height="50" src="<?php echo $item->pic; ?>" class="image">
                                                 <p><?php echo $item->title; ?></p>
                                                 <p><span class="count"><?php echo $item->quantity; ?>件</span><span class="price"></span></p>
@@ -80,5 +97,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            $(function(){
+                var str=location.href;
+                var num=str.indexOf("?") 
+                var ceshi= str.substr(-1)
+                $('.my_nav ul li').click(function(){
+                    if(ceshi==1){
+                        $(this).removeClass("cur");
+                        $(this).addClass("cur");
+                    }else if(ceshi==3){
+                        $(this).addClass("cur");
+                    }
+                      
+                      
+                })
+            });
+        </script>
     </body>
 </html>
