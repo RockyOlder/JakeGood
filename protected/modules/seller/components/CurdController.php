@@ -361,7 +361,7 @@ class CurdController extends SellerController {
     {
         $image = $data->$col == 0 ? "<img src=\"/assets/admin/images/icons/color/cross.png\" />" : "<img src=\"/assets/admin/images/icons/color/tick.png\" />";
 
-        $toggle = CHtml::link($image, './toggle/?c=' . $col . '&id=' . $data->primaryKey, array('class' => 'toggle'));
+        $toggle = CHtml::link($image, Yii::app()->controller->createUrl('toggle').'?c=' . $col . '&id=' . $data->primaryKey, array('class' => 'toggle'));
         return $toggle;
     }
 

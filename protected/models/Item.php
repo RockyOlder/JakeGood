@@ -48,14 +48,14 @@ class Item extends IActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cid, market_id, store_id, name, title, num, price, desc ', 'required'),
+            array('cid, market_id, store_id, name, title, num, price ', 'required'),
             array('is_show, is_showcase', 'numerical', 'integerOnly' => true),
             array('cid, num, price, orig_price, create_time, update_time ', 'length', 'max' => 10),
             array('name', 'length', 'max' => 50),
             array('title', 'length', 'max' => 200),
-            array('parent_cid, outer_id, props, pic_url, list_time, delist_time, 
+            array('parent_cid, outer_id, props, pic_url, list_time, delist_time,desc, 
 				is_virtual, locality_life, expiry_date, is_show, is_showcase, 
-				create_time, update_time, sort_order, regions, commission_ratio, notice, tips', 'safe')
+				create_time, update_time, sort_order, regions, commission, notice, tips', 'safe')
         );
     }
 

@@ -1,5 +1,5 @@
 
-<div class="J-hub elevator-wrapper"  style="top:1114px;" >
+<div class="J-hub elevator-wrapper"  style="top: 1114px;" >
     <ul class="elevator">
         <li class="elevator__floor meishi">
             <a class="link">
@@ -13,12 +13,12 @@
                 <span>娱乐</span>
             </a>
         </li>
-        <li class="elevator__floor dianying">
+<!--        <li class="elevator__floor dianying">
             <a class="link">
                 <i class="link__icon"></i>
                 <span>电影</span>
             </a>
-        </li>
+        </li>-->
         <li class="elevator__floor jiudian">
             <a class="link">
                 <i class="link__icon"></i>
@@ -57,16 +57,18 @@
 
     <div class="mall mall--3cols J-mall J-hub" >
         
-        <?php foreach (ItemCats::model()->findAll('parent_cid=0 AND status=1') as $cat): ?>
+        <?php foreach (ANLMarket::getCats($this->market->market_id, 0, 2) as $cat): ?>
         <?php   $url = ($cat->cid > 0 ? Yii::app()->createUrl('/item/list', array('cid' => $cat->cid)) : $cat->url); ?>
         <div class="category-floor">
             <div class="category-floor__head">
                 <ul class="sub-categories">
-                    <?php foreach (ItemCats::model()->findAll(array('condition' => 'parent_cid='.$cat->cid, 'limit' => 5)) as $subCat): ?>
+                    <?php $i = 0; ?>
+                    <?php foreach ($cat->subs as $subCat): ?>
+                    <?php if ($i++ > 5) break; ?>
                     <?php   $url2 = ($subCat->cid > 0 ? Yii::app()->createUrl('/item/list', array('cid' => $subCat->cid)) : $subCat->url); ?>
                     <li class="sub-categories__cell">
-						<a href="<?php echo $url2; ?>" class="link"><?php echo $subCat->name; ?></a>
-					</li>
+                            <a href="<?php echo $url2; ?>" class="link"><?php echo $subCat->name; ?></a>
+                    </li>
                     <?php endforeach; ?>
                     <li class="sub-categories__cell sub-categories__cell--all"><a target="_blank" href="<?php echo $url; ?>" class="link">全部<span class="arrow"></span></a></li>
                 </ul>
@@ -77,12 +79,12 @@
             <div class="category-floor__body cf">
                 <?php 
                     $itemModel = new ItemSearch(); 
-                    list($items, $count) = $itemModel->search(array('cid' => $cat->cid, 'page' => 1, 'limit' => 8, 'sort' => 'time-desc'));
+                    list($items, $count) = $itemModel->search(array('cid' => $cat->cid, 'page' => 1, 'limit' => 9, 'sort' => 'time-desc'));
                 ?>
                 <?php foreach ($items as $k => $item): ?>
-                    <div class="deal-tile <?php echo ($k+1) % 4 == 0 ? 'deal-tile--even' : '';  ?>">
+                    <div class="deal-tile <?php echo ($k+1) % 3 == 0 ? 'deal-tile--even' : '';  ?>">
                         <a href="<?php echo $this->createUrl('/item/detail', array('item_id' => $item->item_id)); ?>" class="deal-tile__cover" target="_blank">
-                            <img width="220" height="220" class="J-webp" alt="<?php echo $item->title; ?>" src="<?php echo $item->pic_url; ?>" />
+                            <img width="" height="193" class="J-webp" alt="<?php echo $item->title; ?>" src="<?php echo $item->pic_url; ?>" />
                         </a>
                         <h3 class="deal-tile__title">
                             <a href="<?php echo $this->createUrl('/item/detail', array('item_id' => $item->item_id)); ?>" class="w-link" title="<?php echo $item->title; ?>" target="_blank">

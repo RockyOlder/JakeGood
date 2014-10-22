@@ -200,7 +200,7 @@ class AdminController extends Controller {
     public function actionAdd()
     {
         $model = $this->data['model'];
-        $data = $this->blank_form_columns($model->columnNames(), FALSE);
+        $data = $this->buildForm($model->columnNames(), FALSE);
 
         $this->data['columns'] = $data;
 
@@ -217,7 +217,7 @@ class AdminController extends Controller {
         $model = $this->data['model'];
         $model = $model->findByPk($pk);
 
-        $data = $this->full_form_columns($model->columnNames(), $model);
+        $data = $this->fillBuildForm($model->columnNames(), $model);
 
         $this->data['columns'] = $data;
 
@@ -343,7 +343,7 @@ class AdminController extends Controller {
      * @param Array $data
      * @param Bool $return_id
      */
-    protected function blank_form_columns($col, $return_id = FALSE)
+    protected function buildForm($col, $return_id = FALSE)
     {
         //继承list中的标题
         $list_columns = $this->list_columns($col);
@@ -375,9 +375,9 @@ class AdminController extends Controller {
      * @param Array $data
      * @param Bool $return_id
      */
-    protected function full_form_columns($col, $model = NULL)
+    protected function fillBuildForm($col, $model = NULL)
     {
-        $data = $this->blank_form_columns($col, $model);
+        $data = $this->buildForm($col, $model);
 
         foreach ($col as $k => $v)
         {

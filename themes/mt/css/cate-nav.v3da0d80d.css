@@ -13,7 +13,7 @@ sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit}
 legend{color:#000}
 html{background-color:#f6f6f6}
-body{font:normal 14px/1.5 Tahoma,Helvetica,arial,sans-serif;color:#000;background-color:#f9f9f9}
+body{font:normal 14px/1.5 "微软雅黑",Tahoma,Helvetica,arial,sans-serif;color:#000;background-color:#f9f9f9}
 a{color:#666;text-decoration:none}
 a:hover{text-decoration:underline}
 .f1-b,.f2-b,.f3-b{font-weight:bold}
@@ -418,7 +418,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 .new-index-triffle{display:block;background:#FFF;margin-bottom:-1px;width:37px;height:37px;padding:2px;border:1px solid #DDD;color:#999;text-align:center}
 .new-index-triffle--stack{margin-bottom:10px}
 .new-index-triffle:hover{text-decoration:none;color:#E4393C}
-#bd{width:1200px;margin:0 auto;padding:10px 0 65px}
+#bd{width:1010px;margin:0 auto;padding:10px 0 65px}
 #bd .bread-nav{margin:0 0 10px;font-size:12px;color:#333}
 #bd .bread-nav a{color:#666}
 #bd .bread-nav span{margin:0 5px;color:#898989}
@@ -825,8 +825,8 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .common-banner--newtop .common-banner__sheet{width:100%}
 .common-banner--newtop .common-banner__link{display:block;z-index:85}
 .common-banner--newtop .mt-slider-trigger-container{display:none}
-.common-banner--floor{width:1200px}
-.common-banner--floor .common-banner__link{position:absolute;top:0;left:50%;width:1200px;height:60px;margin-left:-600px}
+.common-banner--floor{width:1010px}
+.common-banner--floor .common-banner__link{position:absolute;top:0;left:50%;width:1010px;height:60px;margin-left:-600px}
 .common-banner--floor .color{position:absolute;width:50%;height:60px;margin:0;padding:0;border:0}
 .common-banner--floor .color--left{left:0}
 .common-banner--floor .color--right{right:0}
@@ -980,7 +980,7 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .bg-for-new-index{background-color:#fff}
 .site-mast,.new-header{min-width:980px}
 .site-mast__user-nav-w{background:#FFF;height:28px;font-size:12px;*border-bottom:1px solid #dfdfdf;border-top:1px solid #EEE;box-shadow:0 0 0 1px #FFF,0 0 0 2px #dfdfdf,0 0 5px 3px #f0f0f0;background:#f5f5f5}
-.site-mast__user-nav{position:relative;*zoom:1;margin:0 auto;width:1200px;z-index:90}
+.site-mast__user-nav{position:relative;*zoom:1;margin:0 auto;width:1010px;z-index:90}
 .site-mast__separator{float:left;height:28px;vertical-align:top}
 .site-mast__separator--left{border-right:1px solid #EEE}
 .site-mast__separator--right{border-left:1px solid #FFF}
@@ -1087,7 +1087,7 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .site-mast__user-nav .growth-bubble .bubble-button{float:right;margin-top:0}
 .site-mast__user-nav .growth-bubble .btn-hot{vertical-align:top}
 .site-mast__user-nav .push-bubble{position:absolute;top:29px;right:0;padding:7px 25px 7px 20px;border:1px solid #f5d8a7;background-color:#fff6db;cursor:default;text-align:center}
-.site-mast__branding{position:relative;margin:0 auto;height:112px;width:1200px;*zoom:1;*z-index:50}
+.site-mast__branding{position:relative;margin:0 auto;height:112px;width:1010px;*zoom:1;*z-index:50}
 .site-mast--mini .site-mast__branding{height:auto}
 .site-mast__branding .site-logo{float:left;display:block;_display:inline;width:82px;height:58px;margin-top:20px;text-indent:-100px;overflow:hidden;background-position:0 -76px}
 .site-mast--mini .site-mast__branding{margin:40px auto 30px}
@@ -1103,9 +1103,9 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .site-mast__site-nav-inner{position:relative;margin:0 auto;width:980px;height:40px;z-index:40}
 .site-mast .navbar{margin-left:215px;border-bottom:2px solid #E4393C;padding-left:16px;_height:40px}
 .site-mast .navbar--oldheader{margin-left:0;padding-left:1px}
-.navbar__item-w{float:left;margin-left:-1px}
-.navbar__item{position:relative;display:inline-block;*display:inline;*zoom:1;padding:9px 15px 8px;height:21px;font-weight:bold;color:#333;-webkit-transition:background-color .15s linear;-moz-transition:background-color .15s linear;transition:background-color .15s linear}
-.navbar__item:hover{color:#FFF;text-decoration:none;background:#E4393C}
+.navbar__item-w{float:left;margin-left:-1px;}
+.navbar__item{-webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0;position:relative;display:inline-block;*display:inline;*zoom:1;padding:9px 15px 8px;height:21px;font-weight:bold;color:#333;-webkit-transition:background-color .15s linear;-moz-transition:background-color .15s linear;transition:background-color .15s linear}
+.navbar__item:hover{color:#FFF;text-decoration:none;background:#E4393C;}
 .navbar__item .nav-label{vertical-align:text-bottom}
 .navbar .current .navbar__item{color:#E4393C;text-decoration:none}
 .navbar .current .navbar__item:hover{color:#FFF}
@@ -1334,7 +1334,7 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .smart-query__item--movie{cursor:inherit}
 
 .base-sprite,.nav-level2-indication{background-image:url(../img/base.vdd88fa40.png);background-repeat:no-repeat}
-.mt-cates{position:absolute;top:0;border:2px solid #E4393C;border-bottom:0;padding-left:15px;width:196px;height:38px;line-height:38px;cursor:default;text-align:left;font-weight:bold;color:#FFF;background:#E4393C}
+.mt-cates{position:absolute;top:0;border:2px solid #E4393C;border-bottom:0;padding-left:15px;width:196px;height:38px;line-height:38px;cursor:default;text-align:left;font-weight:bold;color:#FFF;background:#E4393C;-webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0; }
 .mt-cates i{position:absolute;width:20px;height:20px;top:9px;left:175px;background:url(../img/sp-icon-cates.vf3baba99.png) -113px -21px no-repeat}
 .nav-unfolded i{background-position:-113px 0}
 .cate-nav{position:absolute;top:40px;width:211px;height:478px;border:2px solid #E4393C;border-top:0;overflow:visible;background:#FFF;line-height:22px;font-size:12px;font-family:'宋体',sans-serif;z-index:1;-webkit-backface-visibility:hidden}

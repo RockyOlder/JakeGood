@@ -6,13 +6,11 @@ class UserIdentity extends CUserIdentity
     private $_id;
     private $key;
     private $token;
-
     public function UserIdentity($token, $pass)
     {
         $this->token = $token;
         $this->key = pack('H*', "baf6badc168f168b168a168d1c1b89846138fadb631cfdcfbadf684cba68dfcb");
     }
-
     public function authenticate()
     {
         $ctext = base64_decode($this->token);

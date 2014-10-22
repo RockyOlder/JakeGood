@@ -20,6 +20,7 @@ class AreaController extends CurdController {
     {
         parent::init();
         $this->parentId = $this->request->getParam('parent_id', 100000);
+        $this->data['model']->area_id   = $this->parentId;
         $this->data['model']->parent_id = $this->parentId;
         $_GET['Area']['parent_id'] = $this->parentId;
     }

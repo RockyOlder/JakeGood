@@ -301,6 +301,7 @@
         </script>
         <script src="/assets/skin/fourteen/js/page-gallery.js"></script>        
         <script src="/assets/skin/fourteen/vendors/jquery-validate/jquery.validate.min.js"></script>
+        <script src="/assets/skin/fourteen/vendors/jquery-validate/localization/messages_zh.js"></script>
         <script src="/assets/skin/fourteen/js/form-validation.js"></script>
 
     </body>

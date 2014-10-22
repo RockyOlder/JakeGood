@@ -30,14 +30,14 @@ class OrderController extends BaseController {
     }
 
     public function actionIndex() {
-        // print_r($_REQUEST);exit;
+        $this->layout = 'bootstrap';
         $this->template = '/orders/list';
         $this->actionList();
     }
 
     public function actionPersonal() {
 
-        $this->layout = FALSE;
+        $this->layout = 'bootstrap';
         $this->template = '/orders/personal';
         $this->actionList();
     }
@@ -53,19 +53,20 @@ class OrderController extends BaseController {
 
     public function actionDetail() {
         //echo 1;exit;
-    //    print_r($_REQUEST);exit;
+        //    print_r($_REQUEST);exit;
         $id = Yii::app()->user->getId();
         $sn = $this->request->getQuery('sn');
         $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
 
         if ($order) {
-            $addres=new AddressBook();
-            $addres_user=$addres->find("user_id=$id and `default`=1");
+            $addres = new AddressBook();
+            $addres_user = $addres->find("user_id=$id and `default`=1");
             $orderShip = OrderShip::model()->findByAttributes(array('order_id' => $order->order_id));
-           // print_r($orderShip);exit;
+            // print_r($orderShip);exit;
             $this->data['orderShip'] = $orderShip;
             $this->data['order'] = $order;
-            $this->data['addres']=$addres_user;
+            $this->data['addres'] = $addres_user;
+            $this->layout = 'bootstrap';
             $this->template = '/orders/detail';
         } else {
             parent::renderError('订单不存在', '');
@@ -93,10 +94,12 @@ class OrderController extends BaseController {
     }
 
     public function actionPay() {
+     //   echo 1;exit;
         $sn = $this->request->getQuery('sn');
         $order = Order::model()->findByAttributes(array('sn' => $sn, 'user_id' => Yii::app()->user->getId()));
 
         if ($order && $order->is_pay == 0) {
+          //  echo 1;exit;
             $items = $order->OrderItem;
             $ext = count($items) > 1 ? '...等多件' : '';
             $arr = array(
@@ -149,9 +152,9 @@ class OrderController extends BaseController {
         }
         $criteria->order = 'order_id desc';
         $model = new Order('search');
-
+     
         $count = $model->count($criteria);
-
+     //  print_r($count);exit;
         $pages = new CPagination($count);
         $pages->pageSize = 10;
         $pages->applyLimit($criteria);
@@ -177,11 +180,9 @@ class OrderController extends BaseController {
     }
 
     public function actionConfirm() {
-        //    print_r($_REQUEST);exit;
         $this->template = '/confirm_order';
-
         $from = $this->request->getPost('from'); //来自详情页立即购买
-
+   //print_r($cart);exit;
         $this->data['hidden_nav'] = true;
         if ($from == 'detail') {
             list($items, $sub_total, $amount, $ships) = $this->buildItem();
@@ -196,6 +197,7 @@ class OrderController extends BaseController {
                 return parent::renderError('没有要结算的商品');
             }
             $cart = ShoppingCart::model()->findByAttributes(array('user_id' => Yii::app()->user->getId(), 'market_id' => $this->market->market_id));
+         
             $items = json_decode($cart->items);
             $confirm_items = array();
             $amount = 0;
@@ -237,82 +239,79 @@ class OrderController extends BaseController {
     }
 
     public function actionSave() {
+      //  echo 1;exit;
         $orders = $this->insertOrder();
         if ($orders !== FALSE) {
             foreach ($orders as $order) {
-                   $id=$order->sn;
+                $id = $order->sn;
             }
-       $this->request->redirect($this->createUrl('detail',array('sn' =>$id)));
+            $this->request->redirect($this->createUrl('detail', array('sn' => $id)));
         }
         die;
     }
-     function insertOrder()
-    {
-        $addr_id  = $this->request->getPost('address');
-        $items    = $this->request->getPost('items');
-        $memos    = $this->request->getPost('memo');
-        $ships    = $this->request->getPost('ship');
-        
+
+    function insertOrder() {
+        $addr_id = $this->request->getPost('address');
+        $items = $this->request->getPost('items');
+        $memos = $this->request->getPost('memo');
+        $ships = $this->request->getPost('ship');
+    //  print_r($items);exit;
         $address = AddressBook::model()->findByPk($addr_id);
-        
+
         $orders = array();
         $transaction = Yii::app()->db->beginTransaction();
-        try 
-        {
-            $cart  = ShoppingCart::model()->findByAttributes(array('user_id' => Yii::app()->user->getId(), 'market_id' => $this->market->market_id));
+        try {
+            $cart = ShoppingCart::model()->findByAttributes(array('user_id' => Yii::app()->user->getId(), 'market_id' => $this->market->market_id));
             $cart->items = (array) json_decode($cart->items);
-            
+
             $orderTime = time();
-            foreach ($items as $store_id => $v)
-            {
+            foreach ($items as $store_id => $v) {
                 $order = new Order();
-                
-                $order->user_id    = Yii::app()->user->getId();
-                $order->market_id  = $this->market->market_id;
-                $order->store_id   = $store_id;
-                $order->status     = 1;
-                $order->is_pay     = 0;
-                $order->ship_type  = $ships[$store_id];
-                $order->memo       = $memos[$store_id];
-                $order->created    = $orderTime;
-                
-                $order->receiver_name     = $address->name;
-                $order->receiver_country  = $address->country;
-                $order->receiver_state    = $address->state;
-                $order->receiver_city     = $address->city;
+
+                $order->user_id = Yii::app()->user->getId();
+                $order->market_id = $this->market->market_id;
+                $order->store_id = $store_id;
+                $order->status = 1;
+                $order->is_pay = 0;
+                $order->ship_type = $ships[$store_id];
+                $order->memo = $memos[$store_id];
+                $order->created = $orderTime;
+
+                $order->receiver_name = $address->name;
+                $order->receiver_country = $address->country;
+                $order->receiver_state = $address->state;
+                $order->receiver_city = $address->city;
                 $order->receiver_district = $address->district;
-                $order->receiver_address  = $address->area.' '.$address->address;
-                $order->receiver_zip      = $address->zipcode;
-                $order->receiver_mobile   = $address->mobile;
-                $order->receiver_phone    = $address->phone;
-                
+                $order->receiver_address = $address->area . ' ' . $address->address;
+                $order->receiver_zip = $address->zipcode;
+                $order->receiver_mobile = $address->mobile;
+                $order->receiver_phone = $address->phone;
+
                 $orderItems = array();
-                $ship_type  = $order->ship_type.'_fee';
-                $ship_fee   = 0;
-                $amount     = 0;
+                $ship_type = $order->ship_type . '_fee';
+                $ship_fee = 0;
+                $amount = 0;
                 $item_total = 0;
-                foreach ($v as $sku_id => $quantity)
-                {
+                foreach ($v as $sku_id => $quantity) {
                     //如果购物车里有该商品则提出来
                     //删除购物车的商品
-                    if (isset($cart->items->$store_id->$sku_id))
-                    {
+                    if (isset($cart->items->$store_id->$sku_id)) {
+                        //   echo 1;exit;
                         $cart_item = $cart->items->$store_id->$sku_id;
                         unset($cart->items->$store_id->$sku_id);
                     }
-                    
+
                     $price = 0;
-                    if ($sku_id > 0)
-                    {
-                        $sku  = ItemSku::model()->findByPk($sku_id);
+                    if ($sku_id > 0) {
+                        //echo 2;exit;
+                        $sku = ItemSku::model()->findByPk($sku_id);
                         $item_id = $sku->item_id;
                         $sku->stock -= $quantity;
                         $sku->update();
                         $price = $sku->price;
                         $item = Item::model()->findByPk($item_id);
-                    }
-                    else
-                    {
+                    } else {
+                        //  echo 3;exit;
                         $item_id = -$sku_id;
                         $item = Item::model()->findByPk($item_id);
                         $price = $item->price;
@@ -321,51 +320,52 @@ class OrderController extends BaseController {
                     $sub_total = $quantity * $price;
                     $item_total += $sub_total;
                     $orderItems[] = array(
-                        'item_id'     => $item_id,
-                        'title'       => $item->title,
-                        'pic'         => $item->pic_url,
-                        'props_name'  => $cart_item->props,
-                        'price'       => $price,
-                        'ship_fee'    => $item->$ship_type * $quantity,
-                        'quantity'    => $quantity,
-                        'total'       => $sub_total + ($item->$ship_type * $quantity),
-                        'created'     => time()
+                        'item_id' => $item_id,
+                        'title' => $item->title,
+                        'pic' => $item->pic_url,
+                        'props_name' => $cart_item->props,
+                        'price' => $price,
+                        'ship_fee' => $item->$ship_type * $quantity,
+                        'quantity' => $quantity,
+                        'total' => $sub_total + ($item->$ship_type * $quantity),
+                        'created' => time()
                     );
                     $item->num -= $quantity;
                     $item->update();
-                    
-                    
+
+
                     $counter = ItemCounter::model()->findByPk($item_id);
                     $counter->sale += $quantity;
                     $counter->save();
                 }
                 $order->item_total = $item_total;
-                $order->ship_fee   = $ship_fee;
-                $order->amount     = $item_total+$ship_fee;
+                $order->ship_fee = $ship_fee;
+                $order->amount = $item_total + $ship_fee;
                 $order->OrderItem = $orderItems;
                 $order->sn = '123';
-                if ($order->save())
-                {
+                if ($order->save()) {
+                    //     echo 4;exit;
                     $orders[] = $order;
-                }    
-                else
-                {
+                } else {
                     print_r($order->errors);
                     $transaction->rollback();
                 }
             }
+            //清空购物车
+//            if (isset($cart->items)) {
+//                unset($cart->items);
+//            }
             $cart->items = json_encode($cart->items);
             $cart->update();
             $transaction->commit();
             return $orders;
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             print_r($e);
             $transaction->rollback();
             return false;
         }
     }
+
     function buildItem() {
         $item_id = $this->request->getPost('item_id');
         $sku_id = $this->request->getPost('sku_id');

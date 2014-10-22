@@ -20,7 +20,6 @@ class CartController extends BaseController {
 
     public function actionIndex()
     {
-     //   echo 2;exit;
         $this->must_login = TRUE;
         $this->template = '/cart';
 
@@ -30,7 +29,6 @@ class CartController extends BaseController {
 
         $this->data['hidden_nav'] = true;
         $this->data['items'] = $items;
-        //  print_r($this->data);exit;
     }
 
     public function actionAdd()

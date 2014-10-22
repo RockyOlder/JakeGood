@@ -1911,20 +1911,22 @@ body {
     height: 40px;
     line-height: 40px;
     margin-top: 8px;
+    padding: 0;
 }
 .btn_wrap .btn_col .btn_buy {
     float: right;
-    width: 32%;
+    width: 45%;
 }
 .btn_wrap .btn_col .btn_cart {
     float: left;
-    width: 32%;
+    width: 45%;
 }
 .btn_wrap_static {
     background: none repeat scroll 0 0 #eee;
     border-bottom: 1px solid #dddddd;
     border-top: 1px solid #dddddd;
 }
+
 .btn_wrap_fixed {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEUlEQVQIW2O8e/fuf0YGIAAAGssDme/mCZIAAAAASUVORK5CYII=") repeat-x scroll 0 0 / 1px 1px #eeeeee;
     bottom: 0;

@@ -485,7 +485,7 @@ keyframes gif { 0%{
 }
 
 .wx_nav a:before {
-	background-image: url(/wx/img/mall/icon_nav.png?t=4);
+    background-image: url(../images/icon_nav.png);
 	background-repeat: no-repeat;
 	background-size: 161px 46px;
 	-webkit-background-size: 161px 46px

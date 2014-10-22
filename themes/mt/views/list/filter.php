@@ -11,7 +11,11 @@
         </span>
         <span class="breadcrumb__item">
             <span class="breadcrumb__item__title filter-tag">
-                <?php echo $cat->name; ?>
+                <?php 
+                    $pcats = ANLMarket::getParentCats($this->market->market_id, $cat->cid); 
+                    $pcat  = array_shift($pcats);
+                    echo $pcat['name']; 
+                ?>
                 <i class="tri">
                 </i>
             </span>
@@ -21,7 +25,7 @@
                     <i class="tri tri--inner"></i>
                     <span class="option-list--wrap inline-block">
                         <span class="option-list--inner inline-block">
-                            <?php foreach (ItemCats::model()->findAll('parent_cid=0') as $v): ?>
+                            <?php foreach (ANLMarket::getCats($this->market->market_id, 0, 1) as $v): ?>
                             <a href="<?php echo $this->createUrl('item/list', array('cid' => $v->cid)); ?>"><?php echo $v->name; ?></a>
                             <?php endforeach; ?>
                         </span>

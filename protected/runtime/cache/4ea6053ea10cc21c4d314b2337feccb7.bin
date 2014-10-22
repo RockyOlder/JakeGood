@@ -1,0 +1,242 @@
+a:2:{i:0;a:2:{i:0;s:7497:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div class="detail-tit">双人美食套餐</div>
+<table width="100%" cellpadding="0" cellspacing="0" class="detail-table">
+<thead><tr>
+<th width="50%">名称</th>
+		<th width="25%">数量</th>
+		<th width="25%">单价</th>
+	</tr></thead>
+<tbody>
+<tr><th colspan="3">菜品(2选1,不可重复选)</th></tr>
+<tr>
+<td>黄咖喱鸡/猪</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr>
+<td>青咖喱鸡/猪</td>
+            <td class="tc">1份 </td>
+            <td class="tc">48元</td>
+		</tr>
+<tr><th colspan="3">菜品(3选1,不可重复选)</th></tr>
+<tr>
+<td>香茅牛腩煲</td>
+            <td class="tc">1份</td>
+            <td class="tc">52元</td>
+		</tr>
+<tr>
+<td>蒜子蜜汁骨</td>
+            <td class="tc">1份</td>
+            <td class="tc">38元</td>
+		</tr>
+<tr>
+<td>泰酱爆墨鱼仔</td>
+            <td class="tc">1份</td>
+            <td class="tc">32元</td>
+		</tr>
+<tr><th colspan="3">菜品(3选1,不可重复选)</th></tr>
+<tr>
+<td>马来酱炒通菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>蚝油生菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>蒜蓉娃娃菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr><th colspan="3">甜品</th></tr>
+<tr>
+<td>椰汁西米露</td>
+            <td class="tc">2份</td>
+            <td class="tc">8元</td>
+		</tr>
+<tr><th colspan="3">饮品(4选2,可重复选)</th></tr>
+<tr>
+<td>青柠檬蜜</td>
+            <td class="tc">1份</td>
+            <td class="tc">15元</td>
+		</tr>
+<tr>
+<td>木瓜汁</td>
+            <td class="tc">1份</td>
+            <td class="tc">15元</td>
+		</tr>
+<tr>
+<td>柠檬茶</td>
+            <td class="tc">1份</td>
+            <td class="tc">15元</td>
+		</tr>
+<tr>
+<td>泰式椰汁冰</td>
+            <td class="tc">1份</td>
+            <td class="tc">15元</td>
+		</tr>
+<tr><th colspan="3">其它</th></tr>
+<tr>
+<td>老火汤</td>
+            <td class="tc">2份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>米饭</td>
+            <td class="tc">2份</td>
+            <td class="tc">4元</td>
+		</tr>
+<tr>
+<td>茶位</td>
+            <td class="tc">2套</td>
+            <td class="tc">4元</td>
+		</tr>
+<tr class="total">
+<td></td>
+		<td class="tc">总价值<br><strong>团购价</strong>
+</td>
+		<td class="tc">202元<br><strong>108元</strong>
+</td>
+	</tr>
+</tbody>
+</table>
+<div><p> 备注：如需团购券发票，请在消费时向商户提出</p></div>
+
+
+		</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-10-03至2015-01-31</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">周五到周日和国定节假日请提前1天预约，其余情况无需预约</p>
+            </dd>
+        </dl>
+<dl>
+<dt>堂食外带</dt>
+            <dd>
+                <p class="listitem">本单只适用于堂食，包厢大厅随您使用</p>
+                <p class="listitem">商家不提供外送外卖服务</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">不再与店内其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>商家服务</dt>
+            <dd>
+                <p class="listitem">提供免费WiFi</p>
+                <p class="listitem">提供免费停车位</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">环境展示</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/0cd1796b60389c43e16f38278bcc7fa2(640c400)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/b78d87a6f33e38fe6e66426ae021a653(640c400)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/80c5dee6a93e1799de91f047d953d709(640c400)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/c0db540952d810e382bf5b8922ba783c(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/6f65910812f29fc57bfd5f6979b3572d(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/bbc6d5c5e8461bd2f86320a4ec32561d(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s1.dpfile.com/pc/mc/53f824627f273b993a105aac75c33e46(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s2.dpfile.com/pc/mc/661f7ede46703b41f1d9e232f3fe9f2b(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_main_comment"><a rel="nofollow" track="|1|module#5_tab_tgreview,action#click,dealgrp_id#5085867" href="#">团购评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+                <span class="tab-item " data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#5085867" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box J_main_comment imgloading">
+                </div>
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

@@ -14,6 +14,7 @@
 class NotifyController extends BaseController {
     
     public $must_login = TRUE;
+    public $layout = 'bootstrap';
             
     function init()
     {

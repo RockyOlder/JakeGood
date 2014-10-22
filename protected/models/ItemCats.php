@@ -2,6 +2,10 @@
 
 class ItemCats extends IActiveRecord {
 
+    public $subs = array();
+    public $recommends = array();
+    public $css = '';
+    
     /**
      * @return string the associated database table name
      */
@@ -34,13 +38,29 @@ class ItemCats extends IActiveRecord {
         );
     }
 
-    public function queryAll($condition = '', $params = array(), $order = '')
+    public static function queryCats($parentCid = 0, $subs = 9)
     {
-        $data = $this->createCommand()
-                ->where($condition, $params)
-                ->order($order)
-                ->queryAll();
-        return $data;
+        $criteria = new CDbCriteria;
+        $criteria->condition = 'parent_cid=:parent_cid AND status=1';
+        $criteria->params = array(':parent_cid' => $parentCid);
+        $criteria->order = 'sort_order asc';
+        
+        $models = ItemCats::model()->findAll($criteria);
+        
+        $cats = array();
+        if ($models)
+        {
+            foreach ($models as $k => $cat)
+            {
+                $cats[$cat->cid] = $cat;
+                if ($subs > 0)
+                {
+                    $sub = self::queryCats($cat->cid, $subs-1);
+                    $cats[$cat->cid]->subs = $sub;
+                }
+            }
+        }
+        return $cats;
     }
 
     public function createCommand()
@@ -52,18 +72,21 @@ class ItemCats extends IActiveRecord {
     {
         $arr = array();
         $model = ItemCats::model()->findByPk($cid);
-        $attrs = $model->getAttributes();
-        $arr[] = $attrs;
-        if ($attrs['parent_cid'] > 0)
+        if ($model)
         {
-            $arr = array_merge($arr, $this->queryParents($attrs['parent_cid']));
+            $attrs = $model->getAttributes();
+            $arr[] = $attrs;
+            if ($attrs['parent_cid'] > 0)
+            {
+                $arr = array_merge($arr, $this->queryParents($attrs['parent_cid']));
+            }
         }
         return $arr;
     }
 
     function queryListData($cid=0)
     {
-        $condition =  $cid > 0 ? 'cid='.$cid : 'parent_cid='.$cid;
+        $condition =  $cid > 0 ? 'cid='.$cid : 'parent_cid='.$cid .' AND status = 1';
         $models = self::model()->findAll(array('condition' => $condition, 'order' => 'sort_order asc'));
         
         $data = array('' => '请选择...');

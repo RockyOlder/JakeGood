@@ -4,7 +4,7 @@
 .pg-buy .summary-table{font-size:12px}
 .pg-buy .summary-table .desc{padding-left:16px;text-align:left}
 .pg-buy .summary-table .desc a{color:#000}
-.pg-buy .summary-table .desc .calendar-desc{font-family:'arial';color:#f76120}
+.pg-buy .summary-table .desc .calendar-desc{font-family:"Microsoft YaHei","微软雅黑",'arial';color:#f76120}
 .pg-buy .summary-table .appoint-tip{margin-top:10px;padding-left:18px;color:#999;background:url(../img/sys-icons-16.vd2db5315.png) no-repeat 0 2px}
 .pg-buy .summary-table .total{padding-right:16px;text-align:right}
 .pg-buy .summary-table .extra-fee{text-align:left}
@@ -20,7 +20,7 @@
 .pg-buy .summary-table .cart-select-all{margin-left:4px}
 .pg-buy .summary-table .total-fee .amount{margin-right:14px}
 .pg-buy .summary-table .total-fee .amount__num{font-size:14px;color:#ea4f01}
-.pg-buy .summary-table .money,.pg-buy .discount .money{font-family:arial;font-size:14px;letter-spacing:1px}
+.pg-buy .summary-table .money,.pg-buy .discount .money{font-family:"Microsoft YaHei","微软雅黑",arial;font-size:14px;letter-spacing:1px}
 .pg-buy .campaign-choose{margin:20px 0 14px}
 .pg-buy .campaign-choose .common-tip{margin:0 8px 0 0;padding:10px 26px 10px 16px;font-size:12px}
 .pg-buy .campaign-choose .common-tip .common-close{top:6px;right:6px}
@@ -38,7 +38,7 @@
 .pg-buy .summary-table .quantity .f-text:focus{box-shadow:inset 0 1px 2px #dbdbdb;outline:0}
 .pg-buy .summary-table .quantity .f-text:hover{border-color:#b9b9b9}
 .pg-buy .summary-table .price,.pg-buy .summary-table .total{text-align:right;color:#000}
-.pg-buy .summary-table .total .delivery-fee{font-size:12px;color:#999;font-family:arial}
+.pg-buy .summary-table .total .delivery-fee{font-size:12px;color:#999;font-family:"Microsoft YaHei","微软雅黑",arial}
 .pg-buy .delivery{padding-bottom:20px}
 .pg-buy .delivery h3 span{margin-left:10px}
 .pg-buy .delivery .address-list li{padding-left:10px}
@@ -52,7 +52,7 @@
 .pg-buy .mobile-group{margin-bottom:0}
 .pg-buy .blk-mobile{float:left;font-size:12px}
 .pg-buy .blk-mobile h3{font-size:14px}
-.pg-buy .blk-mobile h3 .mobile{font-size:16px;font-family:arial;color:#ea4f01}
+.pg-buy .blk-mobile h3 .mobile{font-size:16px;font-family:"Microsoft YaHei","微软雅黑",arial;color:#ea4f01}
 .pg-buy .insurance .text{color:#666;font-size:12px}
 .pg-buy .insurance .f-textarea{width:500px;height:70px}
 .pg-buy .fineprint ul{display:inline-block;zoom:1;*display:inline;width:300px;margin:0 5px 0 16px;font-size:12px;color:#666;line-height:1.6em;vertical-align:top}

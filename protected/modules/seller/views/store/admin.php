@@ -50,17 +50,17 @@
                 <label class="col-md-3 control-label">地区：</label>
                 <div class="col-md-7">
                     <?php
-                    $url = Yii::app()->createUrl('seller/item/getChildAreas');
-                    list($stateAreas, $citeAreas, $districtAreas) = $model->getAreas();
+                    $url = Yii::app()->createUrl('seller/area/getChild');
+                    list($states, $cites, $districts) = $model->getAreas();
                     ?>
-                    <div class="col-lg-3">
-                        <?php echo CHtml::activeDropDownList($model, 'state', $stateAreas, array('class' => 'area area-state form-control', 'style' => 'width:150px', 'data-child-area' => 'area-city', 'data-url' => $url)); ?>
+                    <div class="col-lg-3" style="width:120px">
+                        <?php echo CHtml::activeDropDownList($model, 'state', $states, array('class' => 'area area-state form-control', 'style' => 'width:120px', 'data-child-area' => 'area-city', 'data-url' => $url)); ?>
+                    </div>
+                    <div class="col-lg-3" style="width:120px">
+                        <?php echo CHtml::activeDropDownList($model, 'city', $cites, array('class' => 'area area-city form-control', 'style' => 'width:120px', 'data-child-area' => 'area-district', 'data-url' => $url)); ?>
                     </div>
                     <div class="col-lg-3">
-                        <?php echo CHtml::activeDropDownList($model, 'city', $citeAreas, array('class' => 'area-city form-control', 'style' => 'width:150px', 'data-child-area' => 'area-district', 'data-url' => $url)); ?>
-                    </div>
-                    <div class="col-lg-3">
-                        <?php echo CHtml::activeDropDownList($model, 'district', $districtAreas, array('class' => 'area-district form-control', 'style' => 'width:150px')); ?>
+                        <?php echo CHtml::activeDropDownList($model, 'district', $districts, array('class' => 'area-district form-control', 'style' => 'width:120px')); ?>
                     </div>
                     <script type="text/javascript">
                         $(document).ready(function() {

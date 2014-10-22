@@ -22,8 +22,14 @@ class BaseController extends Controller {
     function init()
     {
         parent::init();
-        $domain = Yii::app()->request->getServerName();
-        
+        if (isset($_SERVER['HTTP_HOST']))
+        {
+            $domain = $_SERVER['HTTP_HOST'];
+        }
+        else
+        {
+            $domain = $_SERVER['SERVER_NAME'];
+        }
         $market = Market::model()->find("domain like '{$domain}'");
         
         if ($market)
@@ -40,6 +46,14 @@ class BaseController extends Controller {
         {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+        
+        $token = $this->request->getQuery('token');
+        if ($token)
+        {
+            $identity = new UserIdentity($token, '');
+            $identity->authenticate();
+        }
+        
         if ($this->must_login === TRUE  && Yii::app()->user->getIsGuest())
         {
             $this->request->redirect('/login');

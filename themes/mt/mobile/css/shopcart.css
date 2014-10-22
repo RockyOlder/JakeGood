@@ -381,14 +381,14 @@ body {
     top: 0;
 }
 .wx_nav a:before {
-    background-image: url("/wx/img/mall/icon_nav.png?t=4");
+    background-image: url(../images/icon_nav.png);
     background-repeat: no-repeat;
     background-size: 161px 46px;
 }
 .wx_nav {
     border-top: 1px solid #ddd;
     bottom: 0;
-    height: 49px;
+    height: 46px;
     left: 0;
     overflow: hidden;
     position: fixed;

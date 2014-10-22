@@ -4,7 +4,7 @@
  * 用户
  *
  */
-class UserController extends BaseController
+class UserController extends Controller
 {
 
     public $template;
@@ -20,7 +20,7 @@ class UserController extends BaseController
      */
     public function actionLogin()
     {
-    //    echo 1;exit;
+        echo 1;exit;
         $this->template = 'login';
         $this->data['title'] = '登录';
 
@@ -46,8 +46,7 @@ class UserController extends BaseController
     public function actionLogout()
     {
         Yii::app()->user->logout();
-        $this->template = '/user/login';
-      //  Yii::app()->request->redirect('/?logout=true');
+        Yii::app()->request->redirect('/?logout=true');
     }
 
     function afterAction()

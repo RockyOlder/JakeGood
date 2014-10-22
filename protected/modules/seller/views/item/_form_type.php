@@ -34,7 +34,7 @@ $cs->registerScriptFile(Yii::app()->baseUrl . '/assets/js/jquery.form.js', CClie
 <div class="form-group">
     <label class="col-md-3 control-label">上架时间 :</label>
     <div class="col-lg-9">
-        <?php echo CHtml::activeTextField($model, 'list_time', array('class' => 'form-control input-small required datetime')); ?>
+        <?php echo CHtml::activeTextField($model, 'list_time', array('class' => 'form-control input-small required datepiker')); ?>
     </div>
 </div>
 

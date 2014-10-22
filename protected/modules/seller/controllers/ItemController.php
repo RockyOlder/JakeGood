@@ -72,7 +72,8 @@ class ItemController extends CurdController {
                 print_r($model->errors);die;
             }
         }
-
+        $model->list_time  = date('Y-m-d', $model->list_time);
+        $model->commission = $model->commission*100;
         $cats = ItemCats::model()->queryListData($this->store->cid);
         $this->data['cats'] = $cats;
         $this->data['shops'] = array();
@@ -365,8 +366,9 @@ class ItemController extends CurdController {
         }
         
         
-        $_POST['Item']['market_id'] = $this->store->market_id;
-        $_POST['Item']['store_id'] = Yii::app()->user->getId();        
+        $_POST['Item']['commission'] = $_POST['Item']['commission']/100;
+        $_POST['Item']['market_id']  = $this->store->market_id;
+        $_POST['Item']['store_id']   = Yii::app()->user->getId();        
     }
 
     /**

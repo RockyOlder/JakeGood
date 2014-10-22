@@ -37,7 +37,8 @@ class ItemShop extends IActiveRecord{
     public function relations()
     {
         return array(
-            'Item' => array(self::BELONGS_TO, 'Item', 'item_id'),
+            'Item' => array(self::BELONGS_TO, 'Item', 'item_id'),            
+            'Shop' => array(self::HAS_MANY, 'Shop', 'shop_id'),
         );
     }
 }

@@ -21,6 +21,7 @@ class Shop extends IActiveRecord {
             array('market_id, store_id, state, city, district, region, name', 'required'),
             array('username', 'length', 'min'=>4, 'max'=>20),
             array('username', 'unique'),
+            array('id', 'safe'),
         );
     }
 
@@ -32,6 +33,7 @@ class Shop extends IActiveRecord {
         return array(
             'OrderCode' => array(self::HAS_MANY, 'OrderCode', 'shop_id'),
             'Store' => array(self::BELONGS_TO, 'Store', 'store_id'),
+            'ItemShop' => array(self::BELONGS_TO, 'ItemShop', 'id'),   
         );
     }
     /**

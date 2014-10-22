@@ -30,9 +30,9 @@
 
                 <div id="content" class="mall cf J-mall">
                     <?php foreach ($items as $k => $item): ?>
-                        <div class="deal-tile <?php echo $k % 4 != 0 ? 'deal-tile--even' : ''; ?>">
+                        <div class="deal-tile <?php echo $k % 3 != 0 ? 'deal-tile--even' : ''; ?>">
                             <a href="<?php echo $this->createUrl('item/detail', array('item_id' => $item->item_id)); ?>" class="deal-tile__cover" target="_blank">
-                                <img width="220" height="220" class="J-webp" alt="<?php echo $item->title; ?>" src="<?php echo $item->pic_url; ?>" />
+                                <img  height="190px" class="J-webp" alt="<?php echo $item->title; ?>" src="<?php echo $item->pic_url; ?>" />
                             </a>
                             <h3 class="deal-tile__title">
                                 <a href="<?php echo $this->createUrl('item/detail', array('item_id' => $item->item_id)); ?>" class="w-link" title="<?php echo $item->title; ?>" target="_blank">

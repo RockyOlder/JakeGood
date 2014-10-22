@@ -34,7 +34,6 @@
                 <?php 
                     $forward = $this->request->getUrlReferrer();
                     $goto = urlencode(Yii::app()->createAbsoluteUrl('user/login?forward='.urlencode($forward))); 
-                 //   print_r($goto);exit;
                 ?>
                 <iframe src="<?php echo 'http://i.anarry.com/login/fast?goto=' . $goto . (isset($_GET['logout']) ? '&logout=true' : ''); ?>" style="width:100%;height:100%;" scrolling="no"></iframe>
             </div>

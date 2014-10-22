@@ -1,0 +1,356 @@
+a:2:{i:0;a:2:{i:0;s:11212:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div class="detail-tit"></div>
+<table width="100%" cellpadding="0" cellspacing="0" class="detail-table">
+<thead><tr>
+<th width="50%">名称</th>
+		<th width="25%">数量</th>
+		<th width="25%">单价</th>
+	</tr></thead>
+<tbody>
+<tr><th colspan="3">汤底(2选1,不可重复选)</th></tr>
+<tr>
+<td>特色卤水汤底</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>老火骨头汤底</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr><th colspan="3">肉类(6选3,不可重复选)</th></tr>
+<tr>
+<td>金钱肚</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr>
+<td>肾球</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>牛腩</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr>
+<td>牛筋</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr>
+<td>鹅掌翼</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr>
+<td>肥肠</td>
+            <td class="tc">1份</td>
+            <td class="tc">48元</td>
+		</tr>
+<tr><th colspan="3">肉丸类(3选1,不可重复选)</th></tr>
+<tr>
+<td>手打鱼丸</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>手打猪肉丸</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr>
+<td>墨鱼丸</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr><th colspan="3">豆腐类(3选2,不可重复选)</th></tr>
+<tr>
+<td>豆腐皮</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>鲜炸支竹</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>九龙豆腐</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr><th colspan="3">汤底搭档(3选2,不可重复选)</th></tr>
+<tr>
+<td>萝卜</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>冬瓜</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>合水粉葛</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr><th colspan="3">田园时蔬(4选1,不可重复选)</th></tr>
+<tr>
+<td>生菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>白菜心</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>娃娃菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>杂菜</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr><th colspan="3">主食(3选1,不可重复选)</th></tr>
+<tr>
+<td>爽口面</td>
+            <td class="tc">1份</td>
+            <td class="tc">13元</td>
+		</tr>
+<tr>
+<td>白饭</td>
+            <td class="tc">3份</td>
+            <td class="tc">6元</td>
+		</tr>
+<tr>
+<td>生菜包饭</td>
+            <td class="tc">1份</td>
+            <td class="tc">28元</td>
+		</tr>
+<tr><th colspan="3">酱料(6选6,可重复选)</th></tr>
+<tr>
+<td>秘制辣椒酱</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr>
+<td>沙茶酱</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr>
+<td>番茄酱</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr>
+<td>泰式甜辣酱</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr>
+<td>蒜蓉辣椒酱</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr>
+<td>酱油</td>
+            <td class="tc">1份</td>
+            <td class="tc">3元</td>
+		</tr>
+<tr><th colspan="3">茶位(2选1,不可重复选)</th></tr>
+<tr>
+<td>罗汉果茶</td>
+            <td class="tc">6位</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>柠檬水</td>
+            <td class="tc">6位</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr class="total">
+<td></td>
+		<td class="tc">总价值<br><strong>团购价</strong>
+</td>
+		<td class="tc">346元<br><strong>188元</strong>
+</td>
+	</tr>
+</tbody>
+</table>
+<div><p>不提供餐巾纸 套餐包含6份茶位，如需增加，需到店3元/份</p></div>
+
+
+		</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-09-30至2014-12-31</p>
+            </dd>
+        </dl>
+<dl>
+<dt>使用时间</dt>
+            <dd>
+                <p class="listitem">11:00-14:30，16:45-22:00</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">无需预约，如遇消费高峰时段您可能需要排队</p>
+            </dd>
+        </dl>
+<dl>
+<dt>堂食外带</dt>
+            <dd>
+                <p class="listitem">本单只适用于堂食</p>
+                <p class="listitem">商家只提供餐后打包服务，打包盒1元/盒</p>
+                <p class="listitem">商家不提供外送外卖服务</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">自带酒水饮料事宜请您详询商家</p>
+                <p class="listitem">如部分菜品因时令或其他不可抗因素导致无法提供，店内会用等价菜品替换，具体事宜请与店内协商</p>
+                <p class="listitem">不再与店内其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>商家服务</dt>
+            <dd>
+                <p class="listitem">提供免费WiFi</p>
+                <p class="listitem">提供免费停车位</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/e265e8b4743bc0d4d3ad497d462263d4(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/e14c36dafd78e161b778e96036da514b(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/de1c03d0b4489050942855fa7cde80bd(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/2cb13e93dad0c8387c9cfe983d7aaf58(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/858ed73467dd3e168205589392b7f805(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/148d573d8823e7b7f261bc0125bce965(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/7d07352e785bd8c336bd858412525317(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/c15c1da1738bfec4b2600dd4291b2a4e(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/427f6ce54cdee78686d9381d65e96ddc(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/aea3c08eea2dc54aa3f2765caa17d335(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s1.dpfile.com/pc/mc/6637302206f3fbffcddacdde7374720b(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/bf86cf39c88919caa4facfa11a165623(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">商户介绍</span></h3>
+            <div><p> “金钱渡”私房菜（新派卤水火锅）坐落于佛山市南海区大沥镇岭南路85号广佛智城4号楼二楼。本店模仿古代码头风格，以船木装潢为主，高雅大气，店名取自私房特色菜金钱肚谐音，寓意：“自古码头渡人，‘金钱渡’渡你得金钱。”</p></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s1.dpfile.com/pc/mc/12b50e7632e34188a05412b9cb769dd0(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/08b51f173edaf8fc14fb9da8904a2ee8(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s2.dpfile.com/pc/mc/ba7274083c655cf9ccc6359e47a87932(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/c11f1baef7ff057e4c5e0a852a9dea66(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#8183970" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

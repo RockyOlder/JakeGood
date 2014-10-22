@@ -46,7 +46,7 @@
     <div id="bdw" class="bdw pg-buy pg-cart">
         <div id="bd" class="cf">
             <div id="content">
-                <form action="/order/save" method="post" id="J-cart-form" class="common-form" enctype="multipart/form-data">
+                <form action="<?php echo $this->createUrl('order/save'); ?>" method="post" id="J-cart-form" class="common-form" enctype="multipart/form-data">
                     <div class="mainbox">
                         <div class="cart-head cf">
 

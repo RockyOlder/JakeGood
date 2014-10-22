@@ -4,8 +4,8 @@ $(function(){
 	$(window).scroll(function(){
 		var top=$(".category-floor").first().offset().top-$(document).scrollTop()+85;
 		if(top<0)top=0;	
-		var bottomheigh = ($(".component-holy-reco").offset().top-$(document).scrollTop())-$(".elevator-wrapper").height();
-		if(bottomheigh<0)top=bottomheigh;
+		//var bottomheigh = ($(".component-holy-reco").offset().top-$(document).scrollTop())-$(".elevator-wrapper").height();
+		//if(bottomheigh<0)top=bottomheigh;
 		$(".elevator-wrapper").css("top",top);
 	});
 	

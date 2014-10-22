@@ -131,7 +131,7 @@
                         <a href="<?php echo $this->createUrl('shop/list'); ?>">
                             <i class="fa fa-anchor"></i>
                             <span class="submenu-title">
-                                商家管理
+                                分店管理
                             </span>
                         </a>
                     </li>

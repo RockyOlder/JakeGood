@@ -1,0 +1,215 @@
+a:2:{i:0;a:2:{i:0;s:6603:"<div class="box-cont tradingQA Fix" id="J_tabcont" data-id="J_tab_content">
+
+	<div class="dptg-intro Fix">
+
+<div class="detail J_tab" id="tab_show_5" data-type="show-map" data-eval-config='{"title":"适用门店","hippoSeq":2}'>
+	<div class="detail-box">
+		<div class="shop-box">
+			<div class="shoplist-box">
+				<div class="map-holder Hide J_map_holder">
+					<div class="mapbox J_map_box imgloading"></div>
+					<div class="mapbar J_map_expand">
+<a rel="nofollow" href="#" class="J_pop_map"><b></b>查看完整地图</a>
+					</div>
+				</div>
+				<div class="list-holder imgloading">
+					<div class="J_nav">
+					</div>
+					<div class="J_content">
+					</div>
+					<div class="J_pages">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="detail J_tab" id="tab_show_1" data-eval-config='{"title":"团购详情","hippoSeq":3}'>
+			<h3 class="new-tit"><span class="name">团购详情</span></h3>
+		<div class="detail-tit"></div>
+<table width="100%" cellpadding="0" cellspacing="0" class="detail-table">
+<thead><tr>
+<th width="50%">名称</th>
+		<th width="25%">数量</th>
+		<th width="25%">单价</th>
+	</tr></thead>
+<tbody>
+<tr><th colspan="3">主食(6选1,不可重复选)</th></tr>
+<tr>
+<td>比翼双飞+多士</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>韩式卷心蛋治</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>火腿+方包+煎蛋</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>咖喱杂丸（公仔面、米粉、乌冬面）</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>意大利粉（番茄肉酱、黑椒肉酱、白汁肉酱）</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr>
+<td>金肉脆饼</td>
+            <td class="tc">1份</td>
+            <td class="tc">20元</td>
+		</tr>
+<tr><th colspan="3">饮品(5选1,不可重复选)</th></tr>
+<tr>
+<td>热咖啡</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>热奶茶</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>热柠檬茶</td>
+            <td class="tc">1份</td>
+            <td class="tc">18元</td>
+		</tr>
+<tr>
+<td>时日靓汤</td>
+            <td class="tc">1份</td>
+            <td class="tc">15元</td>
+		</tr>
+<tr>
+<td>汽水</td>
+            <td class="tc">1份</td>
+            <td class="tc">9元</td>
+		</tr>
+<tr class="total">
+<td></td>
+		<td class="tc">总价值<br><strong>团购价</strong>
+</td>
+		<td class="tc">38元<br><strong>15元</strong>
+</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+		<div class="detail J_tab" id="tab_show_6" data-eval-config='{"title":"购买须知","hippoSeq":4}'>
+			<h3 class="new-tit"><span class="name">购买须知</span></h3>
+		<div class="detail-box">
+    <div class="purchase-notes">
+		        <dl>
+<dt>有效期</dt>
+            <dd>
+                <p class="listitem">2014-09-30至2014-11-30</p>
+            </dd>
+        </dl>
+<dl>
+<dt>除外日期</dt>
+            <dd>
+                <p class="listitem">国庆节不可用</p>
+            </dd>
+        </dl>
+<dl>
+<dt>使用时间</dt>
+            <dd>
+                <p class="listitem">13:30-16:00</p>
+            </dd>
+        </dl>
+<dl>
+<dt>预约信息</dt>
+            <dd>
+                <p class="listitem">无需预约，如遇消费高峰时段您可能需要排队</p>
+            </dd>
+        </dl>
+<dl>
+<dt>堂食外带</dt>
+            <dd>
+                <p class="listitem">本单只适用于堂食，只适用于大厅使用，敬请谅解</p>
+                <p class="listitem">商家不提供外送外卖服务</p>
+            </dd>
+        </dl>
+<dl>
+<dt>规则提醒</dt>
+            <dd>
+                <p class="listitem">如部分菜品因时令或其他不可抗因素导致无法提供，店内会用等价菜品替换，具体事宜请与店内协商</p>
+                <p class="listitem">不再与店内其他优惠同享</p>
+            </dd>
+        </dl>
+<dl>
+<dt>商家服务</dt>
+            <dd>
+                <p class="listitem">提供免费WiFi</p>
+                <p class="listitem">停车位信息详询商户</p>
+            </dd>
+        </dl>
+<dl>
+<dt>温馨提示</dt>
+            <dd>
+                <p class="listitem">如需团购券发票，请您在消费时向商户咨询</p>
+                <p class="listitem">本单不支持使用大众点评抵用券</p>
+            </dd>
+        </dl>
+</div>
+</div>
+
+		</div>
+
+
+    <!-- movie info start -->
+    <!-- movie info end -->
+
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">产品介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/adc5e239dbb6c7b69c972ff14046a150(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/c0c579fdc0485829f0e2fd6002c846db(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s2.dpfile.com/pc/mc/32fe773829d60a092da4d81f5bf8720e(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t2.s2.dpfile.com/pc/mc/a14cb9eafe825f8624c97a0aa16a7562(640x1024)/thumb.jpg"></div>
+<p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t3.s1.dpfile.com/pc/mc/6ba5b13201d702e6cdfb9cdc46805002(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+        <div class="detail">
+            <h3 class="new-tit"><span class="name">商户介绍</span></h3>
+            <p class="listitem"></p>
+<p class="explain"></p>
+<div class="img"><img src="http://t1.s1.dpfile.com/pc/mc/280955ef10ea4644fc015b033a6c2062(640x1024)/thumb.jpg"></div>
+
+
+        </div>
+
+
+		<div class="detail J_tab J_loadTab" id="tab_show_20" data-type="comment" data-eval-config='{"title":"会员评价","hippoSeq":5}'>
+			<div class="comment-tab J_comment_tab">
+                <span class="tab-item cur" data-ref="J_site_comment"><a rel="nofollow" track="|1|module#5_tab_allreview,action#click,dealgrp_id#8183207" href="#">商户评价<em class="Hide J_total_count">(<b>0</b>)</em></a></span>
+
+
+            </div>
+            <div class="comment-box J_comment_box">
+                <div class="tab-box Hide J_site_comment imgloading">
+                </div>
+            </div>
+		</div>
+</div>
+                        </div>";i:1;N;}i:1;N;}

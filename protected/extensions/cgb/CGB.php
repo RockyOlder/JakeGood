@@ -24,11 +24,12 @@ class CGB extends CComponent {
      * $order 
      *  array(
             'seller'      => '18107558557', //商家帐户
-            'outer_sn'    => '131205NBF3B3'.time(), //订单号
+            'order_sn'    => '131205NBF3B3'.time(), //订单号
             'title'	      => '1号店订单，只为更好的生活', //订单说明/标题
             'total'       => 123, //支付总额
             'item_total'  => 123, //商品总额
             'express_fee' => 10,
+            'commission'  => 10, //元
             'address'     => '广东省深圳市宝安区龙华镇龙胜新村C区205',
             'order_time'  => 1394769395,
             'order_url'   => 'http://www.xxx.com/order?id=xxxxx',
@@ -37,7 +38,7 @@ class CGB extends CComponent {
      */
     function setOrder($order = array())
     {
-        $order['appKey'] = $this->appKey;
+        $order['app_key'] = $this->appKey;
         $this->orders[] = $order;
     }
 

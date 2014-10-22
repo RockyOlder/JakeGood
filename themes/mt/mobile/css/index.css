@@ -13,17 +13,17 @@
 .mod_btns .mod_btn.bg_1 {
 	background: #e4393c;
 	color: #fff;
-	border: 1px solid transparent
+	border: 1px solid transparent;
 }
 
 .mod_btns .mod_btn.bg_1:active {
-	background: #e12326
+	background: #e12326;
 }
 
 .mod_btns .mod_btn.bg_2, .mod_btns .mod_btn.mod_btn_bg1 {
 	background: #3884ff;
 	color: #fff;
-	border: 1px solid transparent
+	border: 1px solid transparent;
 }
 
 .mod_btns .mod_btn.bg_2:active, .mod_btns .mod_btn.mod_btn_bg1:active {

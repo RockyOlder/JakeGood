@@ -84,7 +84,9 @@
 .deal-tile--br{height:348px}
 .deal-tile__cover{display:block;position:relative;_zoom:1;text-decoration:none}
 .deal-tile__cover:hover{text-decoration:none}
-.deal-tile__cover img{display:block}
+.deal-tile__cover img{display:block;-webkit-border-radius: 10px; 
+-moz-border-radius: 10px; 
+border-radius: 10px; }
 .deal-tile__cover .trade-geo{position:absolute;bottom:0;width:318px;padding:5px 16px;max-height:166px;z-index:5;font-size:12px;line-height:22px;color:#ccc;opacity:0;filter:Alpha(opacity=0);overflow:hidden;background-color:#000;cursor:pointer;text-decoration:none!important;-moz-transition-property:opacity;-webkit-transition-property:opacity;transition-property:opacity;-moz-transition-duration:.5s;-webkit-transition-duration:.5s;transition-duration:.5s;-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
 .deal-tile__cover .trade-geo em{color:#f76120}
 .deal-tile__cover .geo-hover{opacity:.9;filter:Alpha(opacity=90)}
@@ -193,7 +195,9 @@
 .mall .paginator-wrapper{clear:both;padding-top:20px;text-align:center}
 .pg-nav .paginator-wrapper{padding-top:24px}
 .mall--3cols{width:980px}
-.mall--3cols .deal-tile,.mall--3cols .brand-tile{margin:0 16px 16px 0;width:220px;padding:2px;}
+.mall--3cols .deal-tile,.mall--3cols .brand-tile{margin:0 16px 16px 0;width:310px;padding:2px;-webkit-border-radius: 10px; 
+-moz-border-radius: 10px; 
+border-radius: 10px; }
 .mall--3cols .brand-tile--even,.mall--3cols .deal-tile--even{float:left;margin-right:0}
 .mall--3cols .deal-tile__cover .trade-geo{width:199px}
 .mall--3cols .deal-tile__cover .deal-st{width:231px;height:192px;background-position:-18px -11px}
@@ -214,17 +218,17 @@
 .floor-index-sprite,.arrow,.category-floor__head .title,#floor-category--xiuxianyule .title,#floor-category--dianying .title,#floor-category--jiankangliren .title,#floor-category--jiudian .title,#floor-category--shenghuo .title,#floor-category--wanggou .title,#floor-category--lvyou .title,.category-floor__head .sub-categories__cell--all .arrow,.category-floor__head .sub-categories__cell--all .link:hover .arrow,.category-floor__foot .link,.category-floor__foot .link:hover,.category-floor__foot .link .link__icon{background-image:url(../img/floor-index.vcccb80e2.png);background-repeat:no-repeat}
 .pg-floor{background-color:#fff}
 .pg-floor .site-mast .common-tip{margin-bottom:0}
-.pg-floor .site-mast .site-mast__user-nav{width:1200px}
-.pg-floor .site-mast .site-mast__branding{width:1200px}
+.pg-floor .site-mast .site-mast__user-nav{width:1010px}
+.pg-floor .site-mast .site-mast__branding{width:1010px}
 .pg-floor .site-mast .search-box{margin:26px 0 0;width:593px}
-.pg-floor .site-mast .search-box__input{width:435px}
+
 .pg-floor .site-mast .search-suggest{width:444px}
 .pg-floor .site-mast .smart-query-panel{width:262px}
-.pg-floor .site-mast .site-mast__site-nav-inner{width:1200px}
+.pg-floor .site-mast .site-mast__site-nav-inner{width:1010px}
 .pg-floor .site-mast .site-mast__site-nav-inner nav{float:left;width:980px}
 .pg-floor .site-mast .site-mast__site-nav-inner .nav-inner__side{float:right;border-bottom:2px solid #E4393C;width:208px;height:38px;background-position:0 -7790px}
 .pg-floor .site-mast .qrcode-weixin{background-position:0 -695px}
-.site-wrapper{margin:0 auto 14px;width:1200px}
+.site-wrapper{margin:0 auto 14px;width:1010px}
 .site-wrapper__content{float:left}
 .site-wrapper__content .fs{position:relative;float:left;margin-bottom:14px;border-right:1px solid #eee;border-bottom:1px solid #eee;padding-left:215px;width:764px;height:479px;background-color:#FFF}
 .site-wrapper__content .content__cell{margin:0 15px;padding:12px 0;border-bottom:1px solid #ededed;zoom:1}
@@ -364,7 +368,7 @@
 .feedback-entry:hover{text-decoration:none;color:#E4393C}
 .feedback-entry .arrow{position:absolute;top:15px;right:20px}
 .feedback-entry:hover .arrow{background-position:0 -313px}
-.pg-floor .component-holy-reco{clear:both;margin:0 auto;width:1200px}
+.pg-floor .component-holy-reco{clear:both;margin:0 auto;width:1010px}
 .pg-floor .component-holy-reco .holy-reco{margin:0}
 .side__block{margin-bottom:12px;border:1px solid #eee;width:206px;background:#fff}
 
@@ -372,7 +376,7 @@
 .index-slider{position:relative;padding-right:1px;zoom:1}
 .index-slider .left{position:relative;float:left;width:367px}
 .index-slider .right{position:relative;float:right;width:366px}
-.index-slider .link{display:block}
+.index-slider .link{}
 .index-slider .link:hover{text-decoration:none}
 .index-slider .discount{position:absolute;right:10px;top:0;width:28px;height:37px;padding:13px 22px 0 12px;color:#FFF;font-weight:bold;font-family:Arial;font-size:18px;text-align:center;background:url(../img/sp-icons-24.v93f4adf7.png) 0 -20px no-repeat;_background:url(../img/sp-icons.vbfce69f2.png) 0 -20px no-repeat;z-index:2}
 .index-slider .discount-big{width:62px;padding:8px 0 5px;font-size:24px}

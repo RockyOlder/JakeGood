@@ -56,7 +56,6 @@ $(function(){
 //浮动导航滑动网页
 $(window).scroll(function(){
 	if($("#deal-stuff").offset().top<$(document).scrollTop()+70){
-         //   alert(1)
 		$("#J-content-navbar").addClass("common-fixed");
 		$("#J-nav-buy").show();	
 	}else{

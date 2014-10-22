@@ -29,7 +29,7 @@ class ItemSearch extends Item{
         
         $market_id = Yii::app()->controller->market->market_id;
         
-        $condition = 't.market_id = '.$market_id;
+        $condition = 't.market_id = '.$market_id . ' AND t.is_show = 1';
         $params    = array();
         if ($cid)
         {

@@ -16,7 +16,6 @@ class ItemController extends BaseController {
 
     public function actionDetail()
     {
-      //  echo 1;exit;
         $this->template = '/detail';
         
         $item_id = $this->request->getQuery('item_id');
@@ -29,7 +28,6 @@ class ItemController extends BaseController {
         $item_sku = array();        
         $this->data['item_sku'] = json_encode($item_sku);        
         $this->data['item'] = $model;
-      //  print_r($this->data['item']);exit;
     }
 
     public function actionList()
@@ -37,14 +35,15 @@ class ItemController extends BaseController {
         $this->layout = FALSE;
         $this->template = '/list';
         $cid     = $this->request->getQuery('cid');
+        $region  = $this->request->getQuery('region');
         $ppath   = $this->request->getQuery('ppath');   //属性检索
         $keyword = $this->request->getQuery('q');
         $page    = $this->request->getQuery('page', 1);
         $limit   = $this->request->getQuery('display');
         $sort    = $this->request->getQuery('sort');
-     //   print_r($cid);exit;
+        
         $params  = array('cid' => $cid, 'page' => $page); //商品检索参数
-        $url_param = array('cid' => $cid);
+        $urlParam = array('cid' => $cid, 'region' => $region, 'q' => $keyword, 'ppath' => $ppath);
         
         if ( ! $limit)
         {
@@ -52,15 +51,15 @@ class ItemController extends BaseController {
         }
         else
         {
-            $params['limit'] = $url_param['display'] = $limit;
+            $params['limit'] = $urlParam['display'] = $limit;
         }
         if ($sort)
         {
-            $params['sort'] = $url_param['sort'] = $sort;
+            $params['sort'] = $urlParam['sort'] = $sort;
         }
         if ($keyword)
         {
-            $params['keyword'] = $url_param['q'] = $keyword;
+            $params['keyword'] = $urlParam['q'] = $keyword;
         }
        
         //属性
@@ -77,7 +76,9 @@ class ItemController extends BaseController {
         }
         //筛选条件
         $cat = ItemCats::model()->findByPk($cid);
-        $catParam = $url_param;
+        $catParam = $urlParam;
+        unset($catParam['ppath']);
+        
         if ($cat->parent_cid > 0)
         {
             $cats = ItemCats::model()->findAll('parent_cid='.$cat->parent_cid); 
@@ -96,6 +97,7 @@ class ItemController extends BaseController {
             unset($catParam['cid']);
             $selected = (!$cid ? 1 : 0);
         }
+        $catParam = array_filter($catParam);
         $filters = array();
         $filters['cats']['name'] = '分类';
         $filters['cats']['values'][0]['name'] = '全部';
@@ -103,13 +105,75 @@ class ItemController extends BaseController {
         $filters['cats']['values'][0]['selected'] = $selected==1 ? true : false;
         foreach ($cats as $v)
         {
+            $catParam['cid'] = $v->cid;
             $filters['cats']['values'][] = array(
                 'name' => $v->name,
-                'url'  => $this->createUrl('item/list', array('cid' => $v->cid)),
+                'url'  => $this->createUrl('item/list', $catParam),
                 'selected' => ($v->cid == $cat->cid ? true : false),
             );
         }
-        $filters += $this->getProps($cid, $prop_param, $url_param);
+        
+        if ($region)
+        {
+            $area = Area::model()->findByPk($region);
+        }
+        else
+        {
+            $area = new Area();
+        }
+        
+        $aParam = $urlParam;
+        unset($aParam['region']);
+        $aParam = array_filter($aParam);
+        
+        $regions = ANLMarket::getRegions($this->market->city);
+        $filters['regions']['name'] = '区域';
+        $filters['regions']['values'][0]['name'] = '全部';
+        $filters['regions']['values'][0]['url']  = $this->createUrl('item/list', $aParam);
+        $filters['regions']['values'][0]['selected'] = (! $region) ? true : false;
+        foreach ($regions as $v)
+        {
+            $aParam['region'] = $v->area_id;
+            
+            $filters['regions']['values'][] = array(
+                'name' => $v->name,
+                'url'  => $this->createUrl('item/list', $aParam),
+                'selected' => ($v->area_id == ($area->parent_id == $this->market->city ? $area->area_id : $area->parent_id) ? true : false),
+            );
+        }
+        
+        if ($region)
+        {
+            $aParam = $urlParam;
+            $aParam = array_filter($aParam);
+            if ($area->parent_id != $this->market->city)
+            {
+                $regions = ANLMarket::getRegions($area->parent_id);
+                $aParam['region'] = $area->parent_id;
+            }
+            else
+            {
+                $regions = ANLMarket::getRegions($area->area_id);
+                $aParam['region'] = $area->area_id;
+            }
+            
+            $filters['regions2']['name'] = '商圈';
+            $filters['regions2']['values'][0]['name'] = '全部';
+            $filters['regions2']['values'][0]['url']  = $this->createUrl('item/list', $aParam);
+            $filters['regions2']['values'][0]['selected'] = ($area->parent_id == $this->market->city) ? true : false;
+            foreach ($regions as $v)
+            {
+                $aParam['region'] = $v->area_id;
+                
+                $filters['regions2']['values'][] = array(
+                    'name' => $v->name,
+                    'url'  => $this->createUrl('item/list', $aParam),
+                    'selected' => ($v->area_id == $area->area_id ? true : false),
+                );
+            }
+        }
+        $filters += ANLMarket::getProps($cid, $prop_param, $urlParam);
+        //$filters += $this->getProps($cid, $prop_param, $urlParam);
         $this->data['filters'] = $filters;
         
         //排序URL
@@ -153,81 +217,31 @@ class ItemController extends BaseController {
         $this->data['sort']    = $sort;
     }
 
-    /**
-     * 获取类目搜索属性
-     * @param type $cid
-     * @return type
-     */
-    public function getProps($cid, $prop_param, $url_param)
+    function queryDingPing($oid)
     {
-        if ( ! $cid) return array();
-        
-        $condition = array('condition' => "t.cid = :cid AND t.parent_pid=0 AND is_key_prop = 1", 'order' => 't.sort_order asc');
-        $condition['params'] = array(':cid' => $cid);
-        $props = ItemProp::model()->findAll($condition);
-        $data = array();
-        
-        foreach ($props as $k => $prop)
-        {
-            $pid     = $prop->pid;
-            //获得属性值
-            $condition = array('condition' => "cid = :cid AND pid=:pid", 'params' => array(':cid' => $cid, ':pid' => $pid), 'order' => 'sort_order asc');
-            $values = ItemPropValue::model()->findAll($condition);
-            
-            //把该组的去掉防止同组重复
-            $ppath   = array();
-            $my_prop = $prop_param;
-            unset($my_prop[$pid]);
-            foreach ($my_prop as $p => $v)
+            if ( ! $oid || strpos($oid, '-') === FALSE) return '';
+            list($city, $id) = explode('-', $oid);
+            //error_reporting(0);
+            $url = "http://t.dianping.com/deal/".$id;
+            $body = Tools::curl($url);
+
+            $body = str_replace("lazy-src-load", "src", $body);
+
+            $doc = new DOMDocument();
+            $meta = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'; 
+            @$doc->loadHTML($meta.$body);
+
+            /* make a result array ... */
+            $result = array();
+
+            /* go through all nodes which have class="baby" ... */
+            $dom = new DOMXPath( $doc );
+            $html = '';
+            foreach( $dom->query( '//*[@id="J_tabcont"]' )  as $element )
             {
-                $ppath[] = $p.':'.$v;
+                    /* just push it into the result ... */
+                    $html = $doc->saveHTML( $element );
             }
-            
-            //重组属性数据
-            $data[$k]['name'] = $prop->name;
-            $data[$k]['values'][0]['name'] = '全部';
-            $data[$k]['values'][0]['url']  = $this->createUrl('item/list', array_merge($url_param, array('ppath' => implode(';', $ppath))));
-            $data[$k]['values'][0]['selected'] = ! isset($prop_param[$pid]) ? true : false;
-            foreach ($values as $i => $value)
-            {
-                $i += 1;
-                $vid = $value->vid;
-                $pathdata = array_merge_recursive($ppath, array($pid.':'.$vid));
-                
-                $data[$k]['values'][$i]['name'] = $value->name;
-                $data[$k]['values'][$i]['url']  = $this->createUrl('item/list', array_merge($url_param, array('ppath' => implode(';', $pathdata))));
-                $data[$k]['values'][$i]['selected'] = (isset($prop_param[$pid]) && $prop_param[$pid] == $vid ? true : false);
-            }
-        }
-        
-        return $data;
+            return $html;
     }
-	
-	function queryDingPing($oid)
-	{
-		if ( ! $oid || strpos($oid, '-') === FALSE) return '';
-		list($city, $id) = explode('-', $oid);
-		//error_reporting(0);
-		$url = "http://t.dianping.com/deal/".$id;
-		$body = Tools::curl($url);
-
-		$body = str_replace("lazy-src-load", "src", $body);
-		
-		$doc = new DOMDocument();
-		$meta = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'; 
-		@$doc->loadHTML($meta.$body);
-
-		/* make a result array ... */
-		$result = array();
-
-		/* go through all nodes which have class="baby" ... */
-		$dom = new DOMXPath( $doc );
-		$html = '';
-		foreach( $dom->query( '//*[@id="J_tabcont"]' )  as $element )
-		{
-			/* just push it into the result ... */
-			$html = $doc->saveHTML( $element );
-		}
-		return $html;
-	}
 }

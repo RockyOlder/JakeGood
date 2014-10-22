@@ -117,25 +117,31 @@ class Area extends IActiveRecord
         return parent::model($className);
     }
 
-    public function getAreas($state = '', $city = '')
+    public function getAreas($state = 0, $city = 0, $district = 0)
     {
-        $areasData = array();
+        $data = array();
         $areas = $this->findAllByAttributes(array('grade' =>  1));
-        $areasData[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
+        $data[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
 
         if ($state)
         {
-            foreach (array('state', 'city') as $area)
+            foreach (array('state', 'city', 'district') as $area)
             {
-                $areas = $this->findAllByAttributes(array('parent_id' => $$area));
-                $areasData[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
+                if ($$area)
+                {
+                    $areas = $this->findAllByAttributes(array('parent_id' => $$area));
+                    $data[] = CMap::mergeArray(array('0' => ''), CHtml::listData($areas, 'area_id', 'name'));
+                }
+                else
+                {
+                    $data[] = array('0' => '');
+                }
             }
         } 
         else 
         {
-            $areasData = CMap::mergeArray($areasData, array(array('0' => ''), array('0' => '')));
+            $data = CMap::mergeArray($data, array(array('0' => ''), array('0' => ''), array('0' => '')));
         }
-
-        return $areasData;
+        return $data;
     }
 } 

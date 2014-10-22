@@ -1,23 +1,17 @@
 
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.area').change(function() {
-            var area = $(this);
-            $.get($(this).data('url'), {'parent_id': $(this).val()}, function(options) {
-                var html = '';
-                for (var value in options) {
-                    html += '<option value="' + value + '">' + options[value] + '</option>';
-                }
-                var childArea = $('.' + area.data('child-area'));
-                childArea.html(html);
-                childArea.parent().find('span').html('');
-                while (childArea.data('child-area')) {
-                    childArea = $('.' + childArea.data('child-area'));
-                    childArea.parent().find('span').html('');
-                    childArea.html('');
-                }
-            }, 'json');
-        });
-    });
-</script>
+<div class="form-group">
+    <label class="col-lg-3 control-label"><?php echo $model->getAttributeLabel('notice'); ?>：</label>
+    <div class="col-lg-5">
+        <?php echo CHtml::activeTextArea($model, 'notice', array('style' => 'width: 533px; height: 110px;')); ?>
+        <em for="<?php echo CHtml::activeId($model, 'notice'); ?>" class="invalid"><?php echo $model->getError('notice'); ?></em>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-lg-3 control-label"><?php echo $model->getAttributeLabel('tips'); ?>：</label>
+    <div class="col-lg-5">
+        <?php echo CHtml::activeTextArea($model, 'tips', array('style' => 'width: 533px; height: 220px;')); ?>
+        <em for="<?php echo CHtml::activeId($model, 'tips'); ?>" class="invalid"><?php echo $model->getError('tips'); ?></em>
+    </div>
+</div>

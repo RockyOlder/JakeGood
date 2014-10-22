@@ -84,7 +84,6 @@
         </thead>
         <tbody>
             <?php foreach ($order['OrderItem'] as $k => $item): ?>
-            
                 <tr>
                     <td>
                         <a href="<?php echo $this->createUrl('/item/detail', array('item_id' => $item->item_id)); ?>" target="_blank">

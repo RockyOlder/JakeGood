@@ -11,7 +11,6 @@ $(function(){
 
 //导航二级菜单
 $(function(){
- 
 	$(".J-nav__list .J-nav-item").hover(function(){
 		$(this).addClass("nav-active");
 		$(this).addClass("nav-hover");

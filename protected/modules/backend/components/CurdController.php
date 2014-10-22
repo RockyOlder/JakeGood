@@ -175,13 +175,16 @@ class CurdController extends SellerController {
         $pk = Yii::app()->request->getParam($this->pk);
         $model = $this->data['model'];
         $model = $model->findByPk($pk);
-
+        $this->data['model'] = $model;
+        
         $data = $this->full_form_columns($model->columnNames(), $model);
 
         $this->data['columns'] = $data;
 
         if (!$this->template)
+        {
             $this->template = '/form';
+        }
     }
 
     /**
@@ -302,7 +305,7 @@ class CurdController extends SellerController {
      * @param Array $data
      * @param Bool $return_id
      */
-    protected function blank_form_columns($col, $return_id = FALSE)
+    protected function blank_form_columns($col, $model = FALSE)
     {
         //继承list中的标题
         $list_columns = $this->list_columns($col);
@@ -322,8 +325,8 @@ class CurdController extends SellerController {
         }
         //默认添加情况下 表单中不显示pk
 
-        if ($return_id === FALSE)
-            unset($data[$this->pk]);
+        if ($model === FALSE) unset($data[$this->pk]);
+        
         return $data;
     }
 
@@ -360,7 +363,7 @@ class CurdController extends SellerController {
     {
         $image = $data->$col == 0 ? "<img src=\"/assets/admin/images/icons/color/cross.png\" />" : "<img src=\"/assets/admin/images/icons/color/tick.png\" />";
 
-        $toggle = CHtml::link($image, './toggle/?c=' . $col . '&id=' . $data->primaryKey, array('class' => 'toggle'));
+        $toggle = CHtml::link($image, Yii::app()->controller->createUrl('toggle').'?c=' . $col . '&id=' . $data->primaryKey, array('class' => 'toggle'));
         return $toggle;
     }
 

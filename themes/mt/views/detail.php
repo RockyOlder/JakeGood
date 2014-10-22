@@ -12,6 +12,7 @@
 
 <script src="/themes/mt/js/list.js"></script>
 <script src="/themes/mt/js/deal.js"></script>
+<script type="text/javascript" src="/assets/js/baidu.map.api.js?v=2.0&ak=4lgYDZ9MWQMbTvjX5R5M5pZG"></script>
 <style>
     .detail {overflow-x: hidden;}
     .detail img {max-width: 748px;overflow-x: hidden;}
@@ -42,7 +43,7 @@
                     <div class="deal-component-images">
                         <div class="simple-gallery">
                             <div class="deal-component-cover">
-                                <img class="focus-view" src="<?php echo $item->pic_url; ?>" alt="<?php echo $item->title; ?>" width="460" height="460" />
+                                <img class="focus-view" src="<?php echo $item->pic_url; ?>" alt="<?php echo $item->title; ?>" width="460" />
                             </div>
                             <div class="candidates">
                                 <!--这里的IMG必须要连写-->
@@ -58,6 +59,8 @@
                         <h2 class="deal-component-price-current sans-serif orange">
                             ¥<strong id="item_price"><?php echo $item->price; ?></strong>
                         </h2>
+                        <span class="deal-component-price-pricetag orange"><?php echo round($item->price/($item->orig_price/10), 1); ?>折</span>
+                        <del class="item">¥ <?php echo $item->orig_price; ?></del>
                     </div>
                     <div class="deal-component-rating ccf">
                         <span class="item">
@@ -72,19 +75,6 @@
                             <a href="#anchor-reviews" class="look-normal">
                                 <div class="rate-status">
                                 </div>
-                            </a>
-                        </span>
-                        <span class="comments-count">
-                            <a href="#anchor-reviews">
-                                <span class="common-rating">
-                                    <span class="rate-stars" style="width:100%"></span>
-                                </span>
-                                (
-                                <span class="deal-component-rating-comment-count orange">
-                                    <?php echo $item->Counter->rating; ?>
-                                </span>
-                                人评价
-                                )
                             </a>
                         </span>
                     </div>
@@ -115,9 +105,7 @@
                                 数量
                             </span>
                             <button type="button" id="buy_count_jian">−</button><input type="text" name="quantity" class="J-cart-quantity" value="1" maxlength="9" id="buy_count"><button class="item" type="button" id="buy_count_jia">+</button>
-                            <span>
-                                库存 <span class="stock_num"><?php echo $item->num; ?></span>
-                            </span>
+                            
                         </div>
                         <div class="deal-component-purchase-button">
                             <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled" value="抢购">
@@ -125,7 +113,7 @@
                                 加入购物车
                             </a>
                             <a class="small-btn deal-component-add-favorite J-component-add-favorite item" onclick="addWishlist(<?php echo $item->item_id; ?>)">
-                                收藏(<b class='J-fav-count'><?php echo $item->Counter->collect; ?></b>)
+                                收藏 <b class='J-fav-count'><?php echo $item->Counter->collect; ?></b> 
                             </a>
                             <a class="small-btn share-tip J-component-share-tip-dialog">分享到</a>
                         </div>
@@ -153,7 +141,7 @@
                     <ul class="cf">
                         <li class="content-navbar__item--current">
                             <a class="tab-item" href="javascript:;">
-                                商品规格
+                                门店信息
                             </a>
                         </li>
                         <li>
@@ -161,25 +149,9 @@
                                 商品描述
                             </a>
                         </li>
-                        <li>
-                            <a class="tab-item" href="javascript:;">
-                                成交记录
-                                <span class="num J-hub">
-                                    (<?php echo (int) $item->Counter->sale; ?>)
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="tab-item" href="javascript:;">
-                                消费评价
-                                <span class="num J-hub">
-                                    (<?php echo (int) $item->Counter->rating; ?>)
-                                </span>
-                            </a>
-                        </li>
                     </ul>
                     <div id="J-nav-buy" class="buy-group" style="display:none;">
-                        <a class="J-buy buy">
+                        <a class="J-buy buy" href="#">
                             抢购
                         </a>
                         <a class="J-add-cart cart" href="#">
@@ -193,107 +165,91 @@
                     <div class="main">
                         <div class="blk detail" style="width:750px;">
                             <div class="deal-term">
-                                <h2 class="content-title" id="anchor-purchaseinfo">
-                                    商品规格
-                                </h2>
-                                <div class="J-poi-wrapper poi-wrapper cf">
-                                    <?php 
-                                        $props = (array) json_decode($item->props);
-                                    ?>
-                                    <table>
-                                        <col width="100">
-                                        <col>
-                                        <?php foreach ($props as $v): ?>
-                                        <tr>
-                                            <th><?php echo $v->name; ?></th>
-                                            <td>
-                                                <?php  echo implode('、', (array)$v->values); ?>
-                                            </td>
-                                        </tr>
-                                        <?php endforeach; ?>
-                                    </table>
+                                <h2 class="content-title" id="anchor-purchaseinfo">门店信息
+                                    </h2>
+                                <div class="J-poi-wrapper poi-wrapper cf" style="height:360px;">
+                                 <div id="allmap" style="width:50%;height:350px;float:left;"></div>
+                                 <div class="item-shop-list biz-wrapper J-biz-wrapper biz-wrapper-nobottom inited" style="float:left;width:50%;height:350px;overflow: auto;">
+                                 <?php  foreach (ANLMarket::getShopsByItem($item->item_id) as $i => $shop): ?>
+                                     <div class="biz-info <?php echo $i == 0 ? 'biz-info--open biz-info--first' : ''; ?>">
+                                         <h5 class="biz-info__title">
+                                            <a href="javascript:;" class="poi-link view-map" data-lat="<?php echo $shop->latitude; ?>" data-lng="<?php echo $shop->longitude?>" data-title="<?php echo $shop->name; ?>" data-addrs="<?php echo $shop->address?>"><?php echo $shop->name; ?></a><i class="down-arrow"></i>
+                                        </h5>
+                                         <div class="biz-info__content" id="yui_3_16_0_1_1413006156435_1767">
+                                            <div class="biz-item field-group" title="<?php echo $shop->address; ?>"><label class="title-label">地址：</label><?php echo $shop->address; ?></div>
+                                            <div class="biz-item link-item">
+                                                <a class="view-map" style="color:#E4393C;" href="javascript:void(0)" data-lat="<?php echo $shop->latitude; ?>" data-lng="<?php echo $shop->longitude?>" data-title="<?php echo $shop->name; ?>" data-addrs="<?php echo $shop->address?>">查看地图</a>
+                                            </div>
+                                            <div class="biz-item"><span class="title-label">电话：</span><?php echo $shop->tel; ?></div>
+
+                                        </div>
+                                     </div>
+                                 <?php endforeach; ?>
+                                 </div>
+                                 
+                                   <script type="text/javascript">
+                                       function loadMap(lat, lng, title, address)
+                                       {
+                                           // 百度地图API功能
+                                            var map = new BMap.Map("allmap");
+                                            var point = new BMap.Point(lng, lat);
+                                            var marker = new BMap.Marker(point);  // 创建标注
+                                            map.addOverlay(marker);              // 将标注添加到地图中
+                                            map.centerAndZoom(point, 15);
+                                            var opts = {
+                                              width : 200,     // 信息窗口宽度
+                                              //height: 100,     // 信息窗口高度
+                                              title : '<b style="color:#E4393C;">'+title+'</b>' , // 信息窗口标题
+                                              enableMessage:false,//设置允许信息窗发送短息
+
+                                            }
+                                            var infoWindow = new BMap.InfoWindow(address, opts);  // 创建信息窗口对象 
+                                            map.openInfoWindow(infoWindow,point);
+                                            marker.addEventListener("click", function(){          
+                                                map.openInfoWindow(infoWindow,point); //开启信息窗口
+                                            });
+                                       }
+                                       $(document).ready(function () {
+                                           $('.view-map').click( function () {
+                                               var info = $(this).data();
+                                               loadMap(info.lat, info.lng, info.title, info.addrs);
+                                           });
+                                           info = $('.biz-info--open .biz-info__title .view-map').data();
+                                           loadMap(info.lat, info.lng, info.title, info.addrs);
+                                       });
+                                   </script>
+                            
                                 </div>
                             </div>
                         </div>
                         <div class="blk detail" style="width:750px;">
                             <div class="deal-term">
                                 <h2 class="content-title" id="business-info">
-                                    商品描述						<?php 
-                                                   //  print_r($this->beginCache());exit;
-										if ($this->beginCache($id, array('duration' => 3600))) 
-										{
-											echo $this->queryDingPing($item->outer_id);
-											$this->endCache();
-										}
-									?>
+                                    商品描述
                                 </h2>
                                 <div id="side-business" class="J-poi-wrapper poi-wrapper cf">
-                                    <?php //echo $item->desc; ?>
-			
-									<style>#tab_show_20{display:none;}</style>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blk detail" style="width:750px;">
-                            <div class="deal-term">
-                                <h2 class="content-title" id="anchor-purchaseinfo">
-                                    成交记录
-                                </h2>
-                                <div class="J-poi-wrapper poi-wrapper cf">
-                                    <table class="table">
-                                        <col>
-                                        <col width="100">
-                                        <col width="100">
-                                        <?php foreach ($item->OrderItem as $v): ?>
-                                        <tr>
-                                            <td><?php echo $v->title; ?></td>
-                                            <td><?php echo $v->quantity; ?></td>
-                                            <td><?php echo $v->price; ?></td>
-                                            <td><?php echo date('Y-m-d H:i:s', $v->created); ?></td>
-                                        </tr>
-                                        <?php endforeach; ?>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="anchor-reviews" class="user-reviews J-rate-wrapper">
-                            <div class="rate-overview" id="J-overview">
-                                <div class="overview-head content-title cf">
-                                    <h3 class="overview-title">
-                                        累计评价
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="rate-detail">
-                                <div class="ratelist-content cf">
-                                    <ul class="review-list" id="yui_3_12_0_1_1406774301359_782">
-                                        <?php foreach ($item->ItemRate as $rate): ?>
-                                        <li class="J-ratelist-item rate-list__item ">
-                                            <div class="info cf">
-                                                <div class="rate-status">
-                                                    <span class="common-rating">
-                                                        <span class="rate-stars" style="width:<?php echo $rate->star*20; ?>%"></span>
-                                                    </span>
-                                                </div>
-                                                <span class="time">
-                                                    [<?php echo date('Y-m-d H:i:s', $rate->created); ?>]
-                                                </span>
-                                            </div>
-                                            <div class="J-normal-view">
-                                                <p class="content">
-                                                    <?php echo $rate->content; ?>
-                                                </p>
-                                            </div>
-                                            <div class="J-long-view long-rate-view" hidden="" style="display:none">
-                                            </div>
-                                            <?php if ($rate->reply != ''): ?>
-                                            <p class="biz-reply">
-                                                商家回复：<?php echo $rate->reply; ?>
-                                            </p>
-                                            <?php endif; ?>
-                                        </li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    
+                                    <?php
+                                        if (trim($item->desc) != '')
+                                        {
+                                            echo $item->desc;
+                                        }
+                                        elseif ($this->beginCache($item->outer_id, array('duration' => 3600*24)))
+                                        {
+                                            
+                                            $desc = $this->queryDingPing($item->outer_id);
+                                            $item->desc = $desc;
+                                            $item->save();
+                                            echo $desc;
+                                            $this->endCache();
+                                        }
+                                        
+                                    ?>
+                                    
+                                    <style>
+                                        .dptg-intro .detail-table{border-collapse:collapse;border-spacing:0;margin-bottom:18px;border:1px solid #e2e2e2;color:#333}.dptg-intro .detail-table thead th{color:#333;background-color:#f2f2f2;font-size:12px;height:26px;line-height:26px;text-align:center;border-bottom:1px solid #e2e2e2}.dptg-intro .detail-table td{border:1px solid #e2e2e2;padding:0 10px;font-size:14px;line-height:26px;word-break:break-all}.dptg-intro .detail-table td.tc{text-align:center}.dptg-intro .detail-table .total td{border:0 none;background-color:#f2f2f2;line-height:26px}
+                                        #tab_show_5, #tab_show_20{display:none;}
+                                    </style>
                                 </div>
                             </div>
                         </div>
@@ -346,7 +302,7 @@
                         <ul id="yui_3_12_0_1_1406788294431_891" class="log-mod-viewed">
                             <li class="deal">
                                 <a href="#" target="_blank" class="pic">
-                                    <img class="" src="/themes/mt/img/__44446873__1618456.jpg" width="208" height="126">
+                                    <img class="" src="/themes/mt/img/__44446873__1618456.jpg" width="188px" >
                                 </a>
                                 <h4>
                                     <a href="#" target="_blank" title="【东门】50岚：饮品4选1，美味不停歇">

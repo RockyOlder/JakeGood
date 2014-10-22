@@ -22,6 +22,7 @@ class WishlistController extends BaseController {
     {
        // echo 1;exit;
         $this->must_login = TRUE;
+        $this->layout = 'bootstrap';
         $this->template = '/wishlist/index';
 
         $list = Wishlist::model()->findAllByAttributes(array('user_id' => Yii::app()->user->getId(), 'market_id' => $this->market->market_id));

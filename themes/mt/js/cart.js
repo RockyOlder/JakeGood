@@ -1,8 +1,5 @@
 var addToCart = function(item) {
-        
     $.getJSON('/cart/add', item, function(res) {
-   // alert(console.log(res))
- //  console.log(res)
         if (res.ret == 0)
         {
             $('.cart-count').html(res.count);

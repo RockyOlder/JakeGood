@@ -6,7 +6,7 @@
 .floor-index-sprite,.feedback-entry .arrow{background-image:url(../img/floor-index.vcccb80e2.png);background-repeat:no-repeat}
 .cf{zoom:1}
 .cf:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden}
-span.money{font-family:arial}
+span.money{font-family:"Microsoft YaHei","微软雅黑",arial}
 span.required{color:red}
 .tri{position:absolute;height:0;width:0;line-height:0;font-size:0;border:3px dashed transparent}
 .f-input{font-size:14px;padding:3px 4px;border-color:#89b4d6;border-style:solid;border-width:1px}
@@ -45,7 +45,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 .icon-share--renren{background-position:-48px 0}
 .icon-share--douban{background-position:-64px 0}
 .icon-share--qzone{background-position:-80px 0}
-.rates{color:#f60;font-size:18px;font-family:tahoma,arial,sans-serif}
+.rates{color:#f60;font-size:18px;font-family:"Microsoft YaHei","微软雅黑",tahoma,arial,sans-serif}
 .rates-point{padding-left:2px;vertical-align:4px;font-size:12px}
 .sysmsgw{width:918px;margin:10px auto 0}
 .sysmsg-tip{position:relative;font-size:14px;padding:10px 60px 10px 14px;border:1px #fed286 solid;background:#fff5d5;margin:0 0 10px;border-radius:5px}
@@ -159,7 +159,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 .mine .filter .current a{padding:1px 7px;background:#E4393C;color:#fff;border-radius:3px}
 .mine .spectip{float:right;margin-top:14px;color:#C30}
 .mine .bonus{position:relative}
-#sidebar{float:right;width:240px;_display:inline}
+#sidebar{float:right;width:220px;_display:inline}
 #sidebar h2{font-size:16px;padding-bottom:9px}
 #sidebar .sidebox{border:2px solid #89b4d6;background-color:#eff8ff;margin-bottom:10px;padding-bottom:12px}
 #sidebar .sidebox h3{font-size:14px;height:32px;line-height:32px;background:#EEE;border-bottom:1px #FFF solid;padding:0 12px;_padding-top:2px;background:-moz-linear-gradient(top,white,#eaecec);background:-webkit-gradient(linear,0 0,0 100%,from(white),to(#eaecec));background-image:linear-gradient(to bottom,#fff,#eaecec);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#EAECEC');box-shadow:0 1px 0 #eaecec}
@@ -287,14 +287,14 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 .side-rank-deals li{margin-top:25px;color:#666;zoom:1}
 .side-rank-deals img{float:left;margin-right:10px}
 .side-rank-deals .info-content{float:left;height:40px;padding-top:15px;overflow:hidden}
-.side-rank-deals .info-content .price{line-height:20px;font-size:14px;font-weight:bold;font-family:arial,sans-serif;color:#ee5238}
+.side-rank-deals .info-content .price{line-height:20px;font-size:14px;font-weight:bold;font-family:"Microsoft YaHei","微软雅黑",arial,sans-serif;color:#ee5238}
 .side-rank-deals .total{line-height:26px;color:#999}
 .side-rank-deals .total span{color:#333;font-weight:bold}
-.side-rank-movies ul{margin-top:10px;font-family:Helvetica,Arial,'宋体'}
+.side-rank-movies ul{margin-top:10px;font-family:"Microsoft YaHei","微软雅黑",Helvetica,Arial,'宋体'}
 .side-rank-movies li{margin-top:0;padding:10px 0;border-bottom:1px solid #f1f1f1;zoom:1}
 .side-rank-movies .last{border-bottom:0}
 .side-rank-movies .info-content{height:auto;width:127px;padding-top:0}
-.side-rank-movies .title{line-height:15px;color:#3dabac;font-family:'宋体';font-weight:bold}
+.side-rank-movies .title{line-height:15px;color:#3dabac;font-family:"Microsoft YaHei","微软雅黑",'宋体';font-weight:bold}
 .side-rank-movies a{display:block;color:#333}
 .side-rank-movies a:hover{text-decoration:none;color:#E4393C}
 .side-rank-movies .description{height:34px;color:#666;overflow:hidden}
@@ -391,7 +391,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 #content .head .filter .current a{padding:3px 7px;background:#00adb2;color:#fff;-moz-border-radius:2px;-webkit-border-radius:2px}
 #content div.success{height:45px;padding-left:255px;padding-top:50px;background:url(../img/bg-pay-return-success.v3fa147ee.gif) no-repeat 145px 25px}
 #content div.error{height:57px;padding-left:232px;padding-top:38px;background:url(../img/bg-pay-return-error.vbc799b90.gif) no-repeat 145px 25px}
-#content div.success h2,#content div.error h2{font-size:28px;font-family:'黑体',helvetica,arial,sans-serif}
+#content div.success h2,#content div.error h2{font-size:28px;font-family:"Microsoft YaHei","微软雅黑",'黑体',helvetica,arial,sans-serif}
 #content .title{padding:0 10px}
 #content .title h3{display:inline;padding-left:10px;font-size:20px}
 #content .sect{width:678px;padding:20px 10px 50px;border-top:1px solid #def}
@@ -440,7 +440,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 #deal-share span{float:left}
 #deal-share ul{float:left;_display:inline;margin-top:2px;margin-right:10px}
 #deal-share li{float:left;_display:inline;margin-left:3px;margin-right:10px}
-#deal-share a{display:block;padding-left:20px;line-height:16px;*line-height:18px;background:url(../img/icons-share.v186f5c42.gif) no-repeat 0 0;color:#000;font-size:12px;font-family:Helvetica,arial,sans-serif;outline:0}
+#deal-share a{display:block;padding-left:20px;line-height:16px;*line-height:18px;background:url(../img/icons-share.v186f5c42.gif) no-repeat 0 0;color:#000;font-size:12px;font-family:"Microsoft YaHei","微软雅黑",Helvetica,arial,sans-serif;outline:0}
 #deal-share a:hover{color:#0981be}
 #deal-share .kaixin{background-position:0 -40px}
 #deal-share .renren{background-position:0 -80px}
@@ -465,7 +465,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 .rating-16x16{width:80px;height:16px;background:url(../img/sp-rate-stars-16x16.v75b255b7.png) repeat-x 0 -21px}
 .rating-16x16 .rate-stars{height:16px;background:url(../img/sp-rate-stars-16x16.v75b255b7.png) repeat-x 0 0}
 #deal-rating{padding:12px 15px;margin-bottom:10px;background-color:#FFF;line-height:36px;border:1px solid #d4d4d4}
-#deal-rating em{font-family:arial,sans-serif;font-weight:bold;color:#f44d3b}
+#deal-rating em{font-family:"Microsoft YaHei","微软雅黑",arial,sans-serif;font-weight:bold;color:#f44d3b}
 #deal-rating .stars{margin:10px 30px 2px 6px;width:80px;vertical-align:top;*vertical-align:0}
 #deal-rating .score-info{padding-left:35px;zoom:1}
 #deal-rating .score-info:hover{text-decoration:none}
@@ -479,7 +479,7 @@ input.disabled{border:1px solid #ccc;background:#eee;color:#999;cursor:default}
 body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 #order-pay-dialog{outline:0}
 #order-pay-dialog .bd{padding:1px;background:#fff}
-#order-pay-dialog .info{margin:14px 15px 30px;height:56px;padding:4px 0 0 80px;background:url(../img/bg-sys-icon-info.va2b8e321.gif) no-repeat 0 0;font-size:16px;font-family:'黑体',arial,sans-serif}
+#order-pay-dialog .info{margin:14px 15px 30px;height:56px;padding:4px 0 0 80px;background:url(../img/bg-sys-icon-info.va2b8e321.gif) no-repeat 0 0;font-size:16px;font-family:"Microsoft YaHei","微软雅黑",'黑体',arial,sans-serif}
 #order-pay-dialog .notice{line-height:20px;padding-left:15px}
 #order-pay-dialog .act{margin:15px 15px 20px;text-align:center}
 #order-pay-dialog .act .success{margin-right:6px}
@@ -531,7 +531,7 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .common-banner--newtop .common-banner__link{display:block;z-index:85}
 .common-banner--newtop .mt-slider-trigger-container{display:none}
 .common-banner--floor{width:980px}
-.common-banner--floor .common-banner__link{position:absolute;top:0;left:50%;width:1200px;height:60px;margin-left:-600px}
+.common-banner--floor .common-banner__link{position:absolute;top:0;left:50%;width:1010px;height:60px;margin-left:-600px}
 .common-banner--floor .color{position:absolute;width:50%;height:60px;margin:0;padding:0;border:0}
 .common-banner--floor .color--left{left:0}
 .common-banner--floor .color--right{right:0}
@@ -631,7 +631,7 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .growth-info--side .growth-user{font-weight:bold;margin-bottom:8px}
 .growth-info--side .growth-user__edit{_position:relative;font-weight:normal;padding-left:10px;float:right}
 .growth-info--side .save-info{color:#999}
-.growth-info--side .save-info .amount{padding:0 .3em;color:#f76120;font-weight:normal;font-family:arial}
+.growth-info--side .save-info .amount{padding:0 .3em;color:#f76120;font-weight:normal;font-family:"Microsoft YaHei","微软雅黑",arial}
 .growth-info--side .save-info .share-button{margin:8px 0;text-align:center}
 .growth-rule{position:relative;border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding-right:242px;min-height:380px;width:535px}
 .growth-rule .growth-rule-table{margin-bottom:-1px}
@@ -861,9 +861,9 @@ body.yui-skin-sam .yui-panel .bd{padding:1px;background:#fff}
 .filter-sect-list a{display:block;_display:inline;_zoom:1;padding:0 4px;height:19px;text-decoration:none}
 .filter-sect-list .item--hot{color:#f76120}
 .filter-sect-list .current,.filter-sect-list a:hover{border-radius:2px;background:#E4393C;color:#FFF;_text-decoration:none}
-.filter-sect-list a span{margin-left:3px;font-size:10px;font-family:arial,sans-serif;color:#999}
+.filter-sect-list a span{margin-left:3px;font-size:10px;font-family:"Microsoft YaHei","微软雅黑",arial,sans-serif;color:#999}
 .filter-sect-list .current span,.filter-sect-list a:hover span{color:#FFF}
-.filter-sect-list b{margin-right:1px;font-family:arial,sans-serif;font-weight:normal;color:#ee5238}
+.filter-sect-list b{margin-right:1px;font-family:"Microsoft YaHei","微软雅黑",arial,sans-serif;font-weight:normal;color:#ee5238}
 .filter-sect-list .has-fc a{display:inline-block;*display:inline}
 .filter-sect-list .filter-sect-list__item--subway a{padding-left:20px;background:url(../img/sp-icons-24.v93f4adf7.png) -185px 1px no-repeat;_background:url(../img/sp-icons.vbfce69f2.png) -185px 1px no-repeat}
 .filter-sect-list .filter-sect-list__item--subway .current,.filter-sect-list .filter-sect-list__item--subway a:hover{background-color:#E4393C;background-position:-185px -19px}

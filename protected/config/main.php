@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 绯荤粺閰嶇疆
+ * 系统配置
  * 
  */
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'o2o',
+    'name' => '互益同城',
     'language' => 'zh_cn',
     'theme' => 'default',
     'timeZone' => 'Asia/Shanghai',
@@ -29,14 +29,14 @@ return array(
         'admin' => array(
             'class' => 'application.modules.admin.AdminModule',
         ),
-        'backend' => array(
+	'backend' => array(
             'class' => 'application.modules.backend.BackendModule',
         ),
-        'verify' => array(
+	'verify' => array(
             'class' => 'application.modules.verify.VerifyModule',
         ),
-        'mobile' => array(
-            'class' => 'application.modules.mobile.MobileModule',                                    
+	'm' => array(
+            'class' => 'application.modules.mobile.MobileModule',
         ),
     ),
     'components' => array(

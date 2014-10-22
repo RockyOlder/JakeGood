@@ -1,6 +1,6 @@
 function addCollection(itemId)
 {
-    $.getJSON('/member/wishlist/add', {
+    $.getJSON('/m/wishlist/add', {
         item_id:itemId
     }, function (json) {
         //alert(json.msg);
@@ -8,24 +8,24 @@ function addCollection(itemId)
 }
 var addCarts = function(item) {
 
-    $.getJSON('/mobile/cart/add', item, function(res) {
+    $.getJSON('/m/cart/add', item, function(res) {
         
         if (res.ret == 0)
         {
             $('.cart-count').html(res.count);
             $('.dropdown-menu--cart ul').html(res.items);
-            window.location = '/mobile/cart';
+            window.location = '/m/cart';
         }
         else if (res.ret == 3001)
         {
-            window.location = '/mobile/login';
+            window.location = '/m/login';
         }
 
     });
 };
 var shopNumber= function($store_id, $sku_id) {
-      var num= $("#item_"+$store_id+'_'+$sku_id+'_quantity').val(); 
-        updateQuantity($store_id, $sku_id, num);
+    var num= $("#item_"+$store_id+'_'+$sku_id+'_quantity').val(); 
+    updateQuantity($store_id, $sku_id, num);
 };
 var updateQuantity = function($store_id, $sku_id, $quantity) {
     $.getJSON('/cart/update', {
@@ -55,30 +55,28 @@ var deleteItem = function($store_id, $sku_id) {
         caculShop();
     });
 };
-   var cats_Shop=function () {
-        $.getJSON('/site/activity', {}, function (res) {
-            if (res.cart.count > 0)
-            {
-                $('#tishi').text(res.cart.count);
-                $('#tishi').show();
-            }
-        });
-    };
+var cats_Shop=function () {
+    $.getJSON('/site/activity', {}, function (res) {
+        if (res.cart.count > 0)
+        {
+            $('#tishi').text(res.cart.count);
+            $('#tishi').show();
+        }
+    });
+};
 
 var caculShop = function () {
     var total = 0;
-    $('.J-total').each(function () {
+    $('.J-total').each(function(){
         total += parseFloat($(this).text());
         $('#J-cart-amount').html($('.J-total').length);
         $('#J-cart-total').html(total.toFixed(2));
-     //   var price=$('#J-cart-total').text()
-      //  $('.price_attr-suit-totalprice').text('¥'+price);
+    //   var price=$('#J-cart-total').text()
+    //  $('.price_attr-suit-totalprice').text('¥'+price);
     });
 };
 $(function(){
-     $('#buyBtn2').click(function(){
-        $('#form_cart').submit(); 
-     })
+
     var total = 0;
     $('.J-total').each(function () {
         total += parseFloat($(this).text());
@@ -107,7 +105,9 @@ $(function(){
     });   
 });
 $(function() {
-    
+    $('#buyBtn2').click(function(){
+        $('#form_cart').submit(); 
+    })
     var price=$('#J-cart-total').text()
     $('.price_attr-suit-totalprice').text('¥'+price);
     $(".deal-component-quantity .plus").click(function() {
@@ -150,27 +150,27 @@ $(function(){
                         $( '#skuNotice' ).fadeOut();
                     }, ( 1 * 1000 ) ); 
                 }else{
-                    window.location = '/mobile/cart';
+                    window.location = '/m/cart';
                 }
             });	
         });
     });
     $('#addCart2').bind('click',function(){
         var _this = $(this);
-        $.getJSON('/mobile/cart/add', item, function(res) {
+        $.getJSON('/m/cart/add', item, function(res) {
             console.log(res)
             if (res.ret == 3001)
             {
                 $('#skuTitle2').text('您还未登陆');
                 $('#skuNotice').show();
-                window.location = '/mobile/login';
+                window.location = '/m/login';
             }else{
                 $('#popone').text('+'+(+item.quantity))
                 $("#popone").css('top','-30px').show();
                 $("#popone").animate({
                     top:'-10px'
                 },1000,function(){
-                  cats_Shop()
+                    cats_Shop()
                 });
                 $('#skuTitle2').text('加入购物车成功');
                 $('#skuNotice').show();

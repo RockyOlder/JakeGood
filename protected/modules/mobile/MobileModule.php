@@ -10,9 +10,8 @@ class MobileModule extends CWebModule
         // import the module-level models and components
        // echo 1;exit;
         $this->setImport(array(
-            'mobile.models.*',
-            'mobile.controller.*',
-            'mobile.components.*',
+            'm.controller.*',
+            'm.components.*',
         ));
     }
 

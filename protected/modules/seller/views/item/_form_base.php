@@ -37,6 +37,16 @@
 </div>
 
 <div class="form-group">
+    <label class="col-lg-3 control-label"><?php echo $model->getAttributeLabel('commission'); ?>：</label>
+    <div class="col-lg-5">
+        <?php echo CHtml::activetextField($model, 'commission', array('class' => 'form-control input-mini required number col-lg-3', 'min' => 8)); ?>
+        <label class="form-control-static"><b>%</b></label>
+        <label class="form-control-static" id="comm_calculat">=<?php echo $model->price*$model->commission/100; ?></label>
+        <em for="<?php echo CHtml::activeId($model, 'commission'); ?>" class="invalid"><?php echo $model->getError('num'); ?></em>
+    </div>
+</div>
+
+<div class="form-group">
     <label class="col-lg-3 control-label"><?php echo $model->getAttributeLabel('num'); ?>：</label>
     <div class="col-lg-5">
         <?php echo CHtml::activetextField($model, 'num', array('class' => 'form-control input-small required number')); ?>
@@ -44,3 +54,11 @@
     </div>
 </div>
 
+<script>
+    $('#Item_commission').keyup(function () {
+        var price = $('#Item_price').val();
+        var ratio = $(this).val();
+        var comm = Math.round(price*ratio)/100;
+        $('#comm_calculat').html('='+(comm));
+    });
+</script>

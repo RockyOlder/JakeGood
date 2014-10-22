@@ -22,7 +22,6 @@ class OrderController extends BaseController {
     
     public function actionConfirm()
     {
-    //    print_r($_REQUEST);exit;
         $this->template = '/confirm_order';
         
         $from = $this->request->getPost('from'); //来自详情页立即购买
@@ -90,9 +89,7 @@ class OrderController extends BaseController {
     
     public function actionSave()
     {
-        print_r($_REQUEST);exit;
         $orders = $this->insertOrder();
-       // echo 1;exit;
         if ($orders !== FALSE)
         {
             foreach ($orders as $order)
@@ -101,11 +98,12 @@ class OrderController extends BaseController {
                 $ext = count($items) > 1 ? '...等多件' : '';
                 $arr = array(
                     'seller'      => (int)    $order->store_id, //商家帐户
-                    'outer_sn'    => (string) $order->sn, //订单号
+                    'order_sn'    => (string) $order->sn, //订单号
                     'title'	  => (string) $items[0]['title'] . $ext, //订单说明/标题
                     'total'       => (float)  $order->amount, //支付总额
                     'item_total'  => (float)  $order->item_total, //商品总额
                     'express_fee' => (string) $order->ship_fee,
+                    'commission ' => (float)  $order->commission,
                     'address'     => (string) $order->receiver_address,
                     'order_time'  => (int)    $order->created,
                     'order_url'   => (string) Yii::app()->createAbsoluteUrl('member/order/detail', array('sn' => $order->sn)),
@@ -163,6 +161,7 @@ class OrderController extends BaseController {
                 $ship_fee   = 0;
                 $amount     = 0;
                 $item_total = 0;
+                $commission = 0;
                 foreach ($v as $sku_id => $quantity)
                 {
                     //如果购物车里有该商品则提出来
@@ -192,6 +191,7 @@ class OrderController extends BaseController {
                     $ship_fee += ($item->$ship_type * $quantity);
                     $sub_total = $quantity * $price;
                     $item_total += $sub_total;
+                    $commission += $sub_total * $item->commission;
                     $orderItems[] = array(
                         'item_id'     => $item_id,
                         'title'       => $item->title,
@@ -201,6 +201,7 @@ class OrderController extends BaseController {
                         'ship_fee'    => $item->$ship_type * $quantity,
                         'quantity'    => $quantity,
                         'total'       => $sub_total + ($item->$ship_type * $quantity),
+                        'commission'  => $sub_total * $item->commission,
                         'created'     => time()
                     );
                     $item->num -= $quantity;
@@ -214,6 +215,7 @@ class OrderController extends BaseController {
                 $order->item_total = $item_total;
                 $order->ship_fee   = $ship_fee;
                 $order->amount     = $item_total+$ship_fee;
+                $order->commission = $commission;
                 $order->OrderItem = $orderItems;
                 $order->sn = '123';
                 if ($order->save())
@@ -222,7 +224,6 @@ class OrderController extends BaseController {
                 }    
                 else
                 {
-                    print_r($order->errors);
                     $transaction->rollback();
                 }
             }
@@ -233,7 +234,6 @@ class OrderController extends BaseController {
         }
         catch (Exception $e)
         {
-            print_r($e);
             $transaction->rollback();
             return false;
         }

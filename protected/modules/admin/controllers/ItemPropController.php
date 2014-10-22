@@ -109,9 +109,9 @@ class ItemPropController extends AdminController {
 
         $this->template = '/list';
     }
-    function blank_form_columns($col, $return_id = FALSE)
+    function buildForm($col, $return_id = FALSE)
     {
-        $data = parent::blank_form_columns($col, $return_id);
+        $data = parent::buildForm($col, $return_id);
         
         $model = $this->data['model'];
         $flags = array(1 => 'Yes', 0 => 'No');

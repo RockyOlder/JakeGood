@@ -98,11 +98,24 @@
             </ul>        
         </div>
     </div>
+	
     <div class="site-mast__branding cf">
         <a href="/" style="float:left;display:block;width:200px;height:70px;margin-top:25px;"><img src="/themes/mt/img/logo.png" /></a>
         <div class="city-info">
-			<h2><a class="city-info__name" href="/"><?php echo $this->market->city_name; ?></a></h2>
-			<a class="city-info__toggle" href="#">切换城市</a>
+			<?php 
+				$markets = Market::model()->findAll(); 
+				foreach ($markets as $v)
+				{
+					if ($v->market_id == $this->market->market_id)
+					{
+						echo '<h2><a class="city-info__name" href="/">'.$v->city_name.'</a></h2>';
+					}
+					else
+					{
+						echo '<a class="city-info__toggle" href="http://'.$v->domain.'">'.$v->city_name.'</a>';
+					}
+				}
+			?>
 		</div>
 		<div class="component-search-box"><div class="J-search-box search-box ">
                 <form action="/item/list" class="search-box__form J-search-form" name="searchForm" method="get">
@@ -121,13 +134,12 @@
                 <div class="smart-query-panel" style="display:none">
                     <div class="smart-query-content"></div>
                 </div>
-
             </div>
         </div>
-        <div class="site-commitment pngfix">
-            <a class="commitment-item commitment-item--retire" href="#" target="_blank"></a>
-            <a class="commitment-item commitment-item--free" href="#" target="_blank"></a>
-        </div>    
+		<div class="site-commitment pngfix">
+			<a class="commitment-item commitment-item--retire" href="#" target="_blank"></a>
+			<a class="commitment-item commitment-item--free" href="#" target="_blank"></a>
+		</div>
     </div>
     <?php
     if (!isset($this->data['hidden_nav']))

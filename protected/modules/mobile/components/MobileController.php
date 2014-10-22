@@ -6,10 +6,11 @@ class MobileController extends BaseController {
     public $store;
     public $shop;
     public $template = NULL;
-    public $title = '益号有约';
+    public $title = '';
 
     public function init() {
         parent::init();
+        $this->title = Yii::app()->name;
     }
 
     /**

@@ -34,7 +34,16 @@
         
         <div class="panel panel-white">
             <div class="panel-heading">
-                其他信息
+                商品图片<a name="itemImg"></a>
+            </div>
+            <div class="panel-body pan">
+                <?php $this->renderPartial("_form_image", array('model' => $model)) ?>
+            </div>        
+        </div>
+        
+        <div class="panel panel-white">
+            <div class="panel-heading">
+                条款信息
             </div>
             <div class="panel-body pan">
                 <?php $this->renderPartial("_form_other", array('model' => $model)) ?>
@@ -43,16 +52,7 @@
 
         <div class="panel panel-white">
             <div class="panel-heading">
-                商品图片<a name="itemImg"></a>
-            </div>
-            <div class="panel-body pan">
-                <?php $this->renderPartial("_form_image", array('model' => $model)) ?>
-            </div>        
-        </div>
-
-        <div class="panel panel-white">
-            <div class="panel-heading">
-                详细描述
+                详细说明
             </div>
             <div class="panel-body pan">
                 <?php $this->renderPartial("_form_desc", array('model' => $model)) ?>

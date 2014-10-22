@@ -1,7 +1,9 @@
 section,article,aside,header,footer,nav,dialog,figure{display:block;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
-fieldset,img{border:0}
+fieldset,img{border:0;-webkit-border-radius: 10px; 
+-moz-border-radius: 10px; 
+border-radius: 10px; }
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
 li{list-style:none}
 caption,th{text-align:left}
@@ -13,7 +15,7 @@ sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit}
 legend{color:#000}
 html{background-color:#f6f6f6}
-body{font:normal 14px/1.5 Tahoma,Helvetica,arial,sans-serif;color:#000;background-color:#f9f9f9}
+body{font:normal 14px/1.5 "微软雅黑",Tahoma,Helvetica,arial,sans-serif;color:#000;background-color:#f9f9f9}
 a{color:#666;text-decoration:none}
 a:hover{text-decoration:underline}
 .f1-b,.f2-b,.f3-b{font-weight:bold}

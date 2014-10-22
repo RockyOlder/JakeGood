@@ -265,7 +265,7 @@
 .pg-deal-default .buy-group .buy:hover{background-position:0 -359px;_background-position-y:-357px}
 .pg-deal-default .buy-group .cart{width:101px;background-position:-55px -334px;_background-position-y:-332px}
 .pg-deal-default .flat-content-navbar .cart:hover{background-position:-55px -359px;_background-position-y:-357px}
-.pg-deal-default .content-navbar.common-fixed{position:fixed;width:1200px;_position:absolute;top:0;z-index:2;background-position:0 -48px}
+.pg-deal-default .content-navbar.common-fixed{position:fixed;width:1010px;_position:absolute;top:0;z-index:2;background-position:0 -48px}
 #deal-stuff{margin-bottom:10px}
 #deal-stuff .standard-content{padding:2px 15px}
 #deal-stuff .box-content{background-color:#eff6fe}
@@ -755,7 +755,7 @@
 .price-selection-container .price-selection--confirm{border-color:#ff8900;-webkit-animation:border-blink 1.5s forwards;-moz-animation:border-blink 1.5s forwards;-ms-animation:border-blink 1.5s forwards;animation:border-blink 1.5s forwards}
 .price-selection-container .price-selection--confirm .selection-tips{display:block;opacity:1;-webkit-animation:blink 1.5s forwards;-moz-animation:blink 1.5s forwards;-ms-animation:blink 1.5s forwards;animation:blink 1.5s forwards}
 .deal-component-quantity{margin-bottom:20px;margin-top:20px}
-.deal-component-quantity .J-cart-quantity{vertical-align:middle;text-align:center;font-size:14px;height:32px;line-height:32px;-webkit-appearance:none;outline:0;width:40px;border:1;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0;margin:0}
+.deal-component-quantity .J-cart-quantity{vertical-align:middle;text-align:center;font-size:14px;height:32px;line-height:32px;-webkit-appearance:none;outline:0;width:40px;border:0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0;margin:0}
 .deal-component-quantity button{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;text-align:center;-webkit-appearance:none;outline:0;height:34px;border:1px solid #ddd;font-size:18px;font-weight:bold;padding:0 6px 2px;margin:0;color:#666;background:#f0f0f0;cursor:pointer}
 .deal-component-quantity button:hover{color:#333;background:#e0e0e0}
 .deal-component-quantity .deal-component-quantity-left{margin-right:10px}

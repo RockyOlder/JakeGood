@@ -13,7 +13,7 @@
     </head>
     <body class="pg-floor pg-deal pg-deal-default pg-deal-detail pg-buy pg-cart">
         <?php $this->renderPartial("/layouts/header", $this->data); ?>
-
+        
         <div id="bdw" class="bdw">
             <div class="site-wrapper cf">
             <?php 
