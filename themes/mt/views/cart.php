@@ -130,6 +130,3 @@
         </div>
     </div>
 </div>
-<script>
-    caculateTotal();
-</script>

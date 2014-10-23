@@ -1,7 +1,8 @@
-  <style type="text/css">
-    
-    </style> 
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<style type="text/css">
+    .name{margin-top: 5px;}
+    .deal-component-quantity button{float: right;}
+</style>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <a class="arrow-wrap float-left" href="javascript:history.back()" mon="element=back">
                 <span class="arrow-left"></span>
             </a>
@@ -28,10 +29,9 @@
 
                                     <div class="cart_goods cart_goods_group" id="180499115" attr-suit="mz">    
                                         <?php foreach ($v as $sku_id => $item): ?>
-                                        <input type="hidden" name="items[<?php echo $store_id; ?>][<?php echo $sku_id; ?>]" value="1" class="J-cart-item J-choose J-choose<?php echo $store_id; ?>" />
-                                            <div class="item<?php echo $sku_id; ?>" id="1076647191" name="items[<?php echo $store_id; ?>][<?php echo $sku_id; ?>]" attr-tag="checkItem" attr-sku="1076647191">
-                                                <i class="icon_select"></i>                      
-                                                <a class="shop_delete" href="javascript:void(0);" onclick="deleteItem(<?php echo $store_id; ?>, <?php echo $sku_id; ?>)">删除</a>
+                                       
+                                            <div class="item<?php echo $sku_id; ?>" id="1076647191" name="items[<?php echo $store_id; ?>][<?php echo $sku_id; ?>]" attr-tag="checkItem" attr-sku="1076647191">                   
+                                                <input type="hidden" name="items[<?php echo $store_id; ?>][<?php echo $sku_id; ?>]" value="1" class="J-cart-item J-choose J-choose<?php echo $store_id; ?>" />
                                                 <img width="80" height="80" class="image" alt="" src="<?php echo $item->pic; ?>">
                                                 <div class="content" attr-tag="linkcontent" attr-href="">                 
                                                     <p class="name"><?php echo $item->title; ?></p>    
@@ -42,15 +42,12 @@
                                                          <div class="deal-component-quantity">
                                                   数量：
                                                         <input type="text" id="<?php echo 'item_' . $store_id . '_' . $sku_id . '_quantity'; ?>" name="quantity[]" value="<?php echo $item->quantity; ?>" class="f-text J-quantity J-cart-quantity" maxlength="4" onBlur="shopNumber(<?php echo $store_id; ?>, <?php echo $sku_id; ?>)">
-                                                         
+                                                        <button type="button" class="btn btn-default" onclick="deleteItem(<?php echo $store_id; ?>, <?php echo $sku_id; ?>)">删除</button>
                                                          </div>
                                                 </div>      
                                             </div>   
                                         <?php endforeach; ?>
                                     <?php endforeach; ?>
-                                    <!-- <div class="foot">             
-                                         <p>应付：<span class="price_attr-suit-totalprice"></span></p>         
-                                     </div>      -->
                                 </div>
                             </div>
                         </div>
@@ -69,9 +66,12 @@
             <div id="checkAllBtn" attr-tag="checkMain" name="checkgroup" class="pay_bar selected"> 
                 <span class="amount">已选<strong class="amount__num" id="J-cart-amount">1</strong>件商品</span>
                 <strong>应付总额</strong>：<span class="inline-block money">¥<strong id="J-cart-total"></strong></span>
-                <input type="submit" id="shopCartConfirm" class="btn_pay" name="buy" value="结算"></a>
+                <input type="submit" id="shopCartConfirm" class="btn btn-danger" name="buy" value="结算"></a>
             </div>
         </form>  
 
         <a class="btn_top btn_top_active " style="display:none; border-style: none;" id="goTop" href="javascript:;">返回顶部</a>
     </div>
+        <script>
+            caculateTotal();
+        </script>

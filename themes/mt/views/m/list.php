@@ -1,14 +1,12 @@
 
-    <body style="padding-top:45px;">
-          <?php  $id = Yii::app()->user->getId(); ?>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <?php  $id = Yii::app()->user->getId(); ?>     
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <a href="/m" class="home float-left" style="left:0;right:auto;"></a>
             <div class="money_bag text-center">
                 <span class="title"><?php echo Yii::app()->name; ?></span>
             </div>
             <a href="#" class="btn-search" onclick="$('#J_bar1').toggle()"></a>
         </div>
-        
         <div id="J_bar1" class="hd_bar fixed in">
             <form id="searchForm" class="hd_search_frm hd_search_frm_focus" action="<?php echo $this->createUrl('item/list'); ?>" method="GET">
                 <input type="search" name="q" placeholder="请输入你想找的商品" autocomplete="off" id="keyWord" class="hd_search_txt hd_search_txt_null">
@@ -96,7 +94,6 @@
                 <a class="nav_me" href="<?php if (!empty($id)){echo Yii::app()->createUrl('/m/order/personal');}else{echo Yii::app()->createUrl('/m/login');} ?>">个人中心</a>
             </div>
         </div>
-
         <script type="text/javascript" src="/themes/mt/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript">
             $(function(){
@@ -109,5 +106,3 @@
                 });
             });
         </script>
-    </body>
-</html>

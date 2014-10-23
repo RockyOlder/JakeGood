@@ -28,11 +28,13 @@
                                 <div class="cart_goods cart_goods_group" id="180499115" attr-suit="mz">    
                                     <?php foreach ($list as $v): ?>
                                         <div class="item" id="1076647191"  attr-tag="checkItem" attr-sku="1076647191">
-                                            <i class="icon_select"></i>                      
-                                            <a class="shop_delete" href="<?php echo $this->createUrl('/m/wishlist/delete', array('id' => $v->id)); ?>" >删除</a>
+                                                            
+                                         
                                             <img width="80" height="80" class="image" alt="" src="<?php echo $v->Item->pic_url; ?>">
                                             <div class="content" attr-tag="linkcontent" attr-href="">                 
+                                            
                                                 <p class="name">   <a href="<?php echo $this->createUrl('/item/detail', array('item_id' => $v->Item->item_id)); ?>" target="_blank"><?php echo $v->title; ?></p></a>  </div>      
+                                      <a class="btn btn-danger" href="<?php echo $this->createUrl('/m/wishlist/delete', array('id' => $v->id)); ?>" >删除</a>
                                         </div>   
                                     <?php endforeach; ?>
                                 </div>
@@ -57,7 +59,7 @@
                } else {
                    echo Yii::app()->createUrl('/m/login');
                }
-                                    ?>">个人中心</a>
+               ?>">个人中心</a>
         </div>
         <!--
         <div id="mainViewFoot">

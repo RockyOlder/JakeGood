@@ -6,6 +6,16 @@ function addCollection(itemId)
         //alert(json.msg);
         });
 }
+var caculShop = function () {
+    var total = 0;
+    $('.J-total').each(function(){
+        total += parseFloat($(this).text());
+        $('#J-cart-amount').html($('.J-total').length);
+        $('#J-cart-total').html(total.toFixed(2));
+    //   var price=$('#J-cart-total').text()
+    //  $('.price_attr-suit-totalprice').text('¥'+price);
+    });
+};
 var addCarts = function(item) {
 
     $.getJSON('/m/cart/add', item, function(res) {
@@ -65,16 +75,7 @@ var cats_Shop=function () {
     });
 };
 
-var caculShop = function () {
-    var total = 0;
-    $('.J-total').each(function(){
-        total += parseFloat($(this).text());
-        $('#J-cart-amount').html($('.J-total').length);
-        $('#J-cart-total').html(total.toFixed(2));
-    //   var price=$('#J-cart-total').text()
-    //  $('.price_attr-suit-totalprice').text('¥'+price);
-    });
-};
+
 $(function(){
 
     var total = 0;
@@ -227,5 +228,65 @@ $(function(){
         $("#loopImgBar").find('li').removeClass('cur');
         oLi.addClass('cur');
         $('#loopImgUl').css('left',-205*(oLi.attr('no')-1)+'px');
+    });
+jQuery.validator.addMethod("zipcode", function(value, element) {
+    var tel = /^[0-9]{6}$/;
+    return this.optional(element) || (tel.test(value));
+}, "请正确填写邮政编码");
+
+jQuery.validator.addMethod("area", function(value, element) {
+    return value != 0;
+}, "");
+});
+
+$().ready(function() {
+    $("#active_form").validate({
+        rules: {
+            'AddressBook[name]': {
+                required: true, 
+                minlength: 2, 
+                maxlength: 20
+            },
+            'AddressBook[zipcode]': {
+                required: true, 
+                zipcode: true
+            },
+            'AddressBook[address]': {
+                required: true, 
+                minlength: 5, 
+                maxlength: 200
+            },
+        },
+        messages: {
+            'AddressBook[name]': {
+                required: "请输入联系人姓名",
+                minlength: "请输入正确的姓名"
+            },
+            'AddressBook[zipcode]': "请正确填写邮政编码",
+            'AddressBook[address]': {
+                required: "请输入详细地址",
+                minlength: "最少5字",
+                maxlength: "最长200字"
+            }
+        }
+    });
+});
+$(document).ready(function() {
+    $('.area').change(function() {
+        var area = $(this);
+        $.get($(this).data('url'), {
+            'parent_id': $(this).val()
+            }, function(options) {
+            var html = '';
+            for (var value in options) {
+                html += '<option value="' + value + '">' + options[value] + '</option>';
+            }
+            var childArea = $('.' + area.data('child-area'));
+            childArea.html(html);
+            while (childArea.data('child-area')) {
+                childArea = $('.' + childArea.data('child-area'));
+                childArea.html('');
+            }
+        }, 'json');
     });
 });

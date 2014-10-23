@@ -13,7 +13,6 @@
         <!-- Bootstrap theme -->
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/m/css/theme.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/themes/mt/css/cate-nav.list.css" />
         <link rel="stylesheet" href="/themes/mt/mobile/css/shopcart.css" />
         <link rel="stylesheet" href="/themes/mt/mobile/css/product_detail.css" />
         <link rel="stylesheet" type="text/css" href="/themes/mt/mobile/css/navigation.css" />
@@ -21,6 +20,8 @@
         <link rel="stylesheet" type="text/css" href="/themes/mt/mobile/css/order_detail.css" />
         <link rel="stylesheet" href="/themes/mt/mobile/css/order_list.css" />
         <link rel="stylesheet" type="text/css" href="/themes/mt/mobile/css/product_list.css" />
+        <link rel="stylesheet" href="/themes/mt/mobile/css/shopcart.css" />
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -37,17 +38,15 @@
             </div>
             <a href="/m" class="home" mon="element=home"></a>
         </div>
-
         <div class="container" role="main">
             <?php echo $content; ?>
         </div> <!-- /container -->
-
-
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="/assets/plugins/jquery.v2.1.1.js"></script>
         <script src="/themes/mt/js/mobile.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
+
     </body>
 </html>

@@ -180,6 +180,7 @@ class OrderController extends BaseController {
     }
 
     public function actionConfirm() {
+        $this->layout = 'bootstrap';
         $this->template = '/confirm_order';
         $from = $this->request->getPost('from'); //来自详情页立即购买
    //print_r($cart);exit;
@@ -352,9 +353,9 @@ class OrderController extends BaseController {
                 }
             }
             //清空购物车
-//            if (isset($cart->items)) {
-//                unset($cart->items);
-//            }
+            if (isset($cart->items)) {
+                unset($cart->items);
+            }
             $cart->items = json_encode($cart->items);
             $cart->update();
             $transaction->commit();

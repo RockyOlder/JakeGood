@@ -1008,11 +1008,11 @@ label.count input {
 .cart_goods .image {
     display: block;
     float: left;
-    margin: 0 10px 0 33px;
+  
 }
 .cart_goods .name {
-    height: 36px;
-    line-height: 18px;
+    height: 42px;
+    line-height: 24px;
     margin: -2px 0 0;
     overflow: hidden;
     padding-right: 30px;

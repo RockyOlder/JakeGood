@@ -13,7 +13,7 @@ class AddressController extends BaseController {
 
     public function actionIndex()
     {
-        $this->layout = 'main';
+        $this->layout = 'bootstrap';
         $this->template = 'index';
         
         $id = $this->request->getQuery('id');
